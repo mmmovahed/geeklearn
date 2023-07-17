@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'yekan';
+}
+.search-box{
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    min-height: 220px;
+    max-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+#search{
+    border: 0;
+    outline: none;
+    width: 90%;
+    background: transparent;
+    border-radius:50px;
+    color: #fff;
+    padding: .5em;
+    font-size: 1.5rem;
+    direction: rtl;
+}
+#search::placeholder{
+    direction: rtl;
+    color: #fff;
+    padding-right: .2em;
+    font-size: 1.5rem;
+}
+#search::-webkit-search-cancel-button {
+    display: none;
+}
+.main-search{
+    width:75%;
+    background: rgba(255, 255, 255, .2);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 60px;
+    padding: 5px 10px;
+}
+.main-search button {
+    border: 0;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background: transparent;
+    color: #fff;
+    margin: 0 2em 0 0;
+    margin-right: auto;
+}
+.main-search button i{
+    font-size: 2rem;
+}
+.search-container{
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.slogan {
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8%;
+}
+.slogan p{
+    color: #fff;
+    padding: .5em;
+    font-size: 1.4rem;
+    text-align: center;
+}
+@media screen and (max-width:850px) {
+
+    .slogan p{
+        font-size: 1rem;
+    }
+    .main-search button i{
+        font-size: 1.5rem;
+    }
+    #search::placeholder{
+ 
+        font-size: 1.3rem;
+    }
+    #search{
+        font-size: 1.3rem;
+    }
+ }
