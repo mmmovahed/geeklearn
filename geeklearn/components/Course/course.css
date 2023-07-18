@@ -5,14 +5,12 @@
     font-family: "yekan";
   }
 .course{
-    /* border: 1px solid saddlebrown; */
     min-width: 250px;
     max-width:250px;
     min-height: 350px;
     max-height: 350px;
     border-radius: 8px;
     background-color: #2f3041;
-  
   }
   .img-course{
     width: 100%;
@@ -25,7 +23,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* border: 1px solid red; */
   }
   .category{
     border: 0;
@@ -50,7 +47,6 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    /* border: 1px solid seagreen; */
     margin-top: 2em;
   }
   .student-container{
