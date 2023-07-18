@@ -60,6 +60,7 @@ body {
   margin:4em 0;
 
 }
+
 .courses-container{
   margin:1em 1em;
   width: 100%;
@@ -72,6 +73,16 @@ body {
   align-items: flex-start;
   gap: 1.5em 1em;
   padding: .5em;
+}
+#footer{
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 150px;
+  max-height: 150px;
+  background-color: #2c2d3d;
 }
 
 @media screen and (max-width:575px){
