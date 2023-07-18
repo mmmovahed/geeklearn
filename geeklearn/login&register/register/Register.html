@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Register</title>
+  </head>
+  <body>
+    <section class="main">
+      <!-- Login container -->
+      <div class="container">
+        <!-- image -->
+        <div class="img-box">
+          <img class="img" src="img/photo-Login.jpg" alt="" />
+        </div>
+        <!-- form -->
+        <div class="login-box">
+          <h2 class="">ثبت نام</h2>
+          <form id="form" action="" method="post" class="">
+            <input
+              class="first-name"
+              id="username"
+              type="text"
+              name="fname"
+              placeholder="نام کاربری"
+            />
+            <span class="" style="display: none"
+              >حداقل 3 کاراکتر حداکثر 10 کاراکتر</span
+            >
+            <input
+              class=""
+              id="phone"
+              type="text"
+              name="phone"
+              placeholder="شماره موبایل"
+            />
+            <span class="" style="display: none"
+              >حداقل 3 کاراکتر حداکثر 10 کاراکتر</span
+            >
+            <input
+              class=""
+              id="email"
+              type="text"
+              name="email"
+              placeholder="ایمیل"
+            />
+            <span class="" style="display: none"
+              >حداقل 3 کاراکتر حداکثر 10 کاراکتر</span
+            >
+
+            <input
+              class=""
+              id="password"
+              type="password"
+              name="password"
+              placeholder="رمز"
+            />
+            <span class="modal-pass" style="display: none"
+              >.پسورد شما باید حداقل شامل 8 کاراکتر باشد</span
+            >
+            <i></i>
+            <i></i>
+
+            <input
+              class=""
+              id="password2"
+              type="password"
+              name="password"
+              placeholder="تکرار رمز"
+            />
+            <span class="modal-repass" style="display: none"
+              >.پسورد ها مطابقت ندارند</span
+            >
+
+            <button id="submit" type="submit">ثبت نام</button>
+          </form>
+
+          <div class="line">
+            <hr class="" />
+            <p class="">OR</p>
+            <hr class="" />
+          </div>
+          <div class="reg-container">
+            <button class="btn"><a href="Login.html">ورود</a></button>
+            <p>حساب کاربری دارید؟</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="register.js"></script>
+  </body>
+</html>
