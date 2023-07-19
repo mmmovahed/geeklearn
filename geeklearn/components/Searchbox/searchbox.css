@@ -23,7 +23,7 @@
     background: transparent;
     border-radius:50px;
     color: #fff;
-    padding: .5em;
+    padding: .3em .5em;
     font-size: 1.5rem;
     direction: rtl;
 }
@@ -37,13 +37,13 @@
     display: none;
 }
 .main-search{
-    width:75%;
+    width:70%;
     background: rgba(255, 255, 255, .2);
     display: flex;
     justify-content: flex-end;
     align-items: center;
     border-radius: 60px;
-    padding: 5px 10px;
+    padding:.5em;
 }
 .main-search button {
     border: 0;
@@ -84,14 +84,17 @@
     .slogan p{
         font-size: 1rem;
     }
+    .main-search{
+        padding: .3em;
+    }
     .main-search button i{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     #search::placeholder{
  
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
     #search{
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
  }
