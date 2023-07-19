@@ -1,9 +1,9 @@
 @font-face {
   font-family: yekan;
-  src: url("../../assets/font/yekan-font/Yekan.eot");
-  src: url("../../assets/font/yekan-font/yekan-regular.eot") format("Yekan-opentype"),
-    url("../../assets/font/yekan-font/yekan-regular.woff") format("woff"),
-    url("../../assets/font/yekan-font/yekan-regular.ttf") format("truetype");
+  src: url("..//font/yekan-font/Yekan.eot");
+  src: url("../font/yekan-font/yekan-regular.eot") format("Yekan-opentype"),
+    url("../font/yekan-font/yekan-regular.woff") format("woff"),
+    url("../font/yekan-font/yekan-regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -39,11 +39,11 @@
   height: auto;
   object-fit: cover;
 }
-.login-box {
+.register-box {
   text-align: right;
   padding: 0 4em;
 }
-.login-box h2 {
+.register-box h2 {
   font-weight: 700;
   font-size: 1.3rem;
   line-height: 2em;
@@ -53,28 +53,47 @@
 form {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 0.5em;
 }
 
-#email {
+input {
   font-size: 1rem;
-  padding: 0.5em;
+  padding: 0.4em 0.6em;
   border-radius: 0.75em;
-  margin-top: 2em;
   border: 1px solid #eee;
 }
 
+#username {
+  margin-top: 1em;
+}
 #password {
+  width: 100%;
+}
+.fa-eye {
+  position: absolute;
+  top: 16px;
+  right: 7px;
   font-size: 1rem;
-  padding: 0.5em;
-  border-radius: 0.75em;
-  border: 1px solid #eee;
+  color: #5c5959;
+  cursor: pointer;
+}
+.fa-eye-slash {
+  position: absolute;
+  top: 16px;
+  right: 7px;
+  font-size: 1rem;
+  color: #5c5959;
+  cursor: pointer;
+}
+.pass-container {
+  width: 100%;
+  position: relative;
 }
 
 #submit {
   transition: 0.2s all ease-in-out;
   color: #fff;
-  padding: 0.5em 0;
+  padding: 0.3em 0;
   background-color: rgb(0, 45, 116);
   font-size: 1rem;
   border-radius: 0.75em;
@@ -101,63 +120,59 @@ form {
   text-align: center;
   color: #bbb;
 }
-.google-login {
-  transition: 0.2s all ease-in-out;
-  font-size: .9rem;
-  line-height: 1.5em;
-  padding: 0.5em 0;
-  background-color: #fff;
-  border-radius: 0.75rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-top: 1.5em;
-  cursor: pointer;
-  border: 1px solid #ccc;
-}
-
-.forget-pass {
-  font-size: 0.8rem;
-  line-height: 1rem;
-  margin: 1.5em 0;
-  padding: 1em 0;
-  border-bottom: 2px solid #bbb
-}
-.reg-container {
+.log-container {
   font-size: 0.8rem;
   line-height: 1em;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 1.5em 0;
+  margin: 1em 0;
 }
-.reg-container button {
+.log-container button {
   transition: 0.3s all ease-in-out;
-  padding: 0.25em .75em;
+  padding: 0.25em 0.75em;
   background-color: rgb(0, 45, 116);
   border-radius: 0.75em;
   cursor: pointer;
   border: none;
 }
 
-.reg-container button a {
+.log-container button a {
   color: #fff;
   font-size: 0.8rem;
   text-decoration: none;
 }
 
+/* JS-class */
+.border-red {
+    border: 2px solid rgb(248 113 113);;
+}
+.border-green{
+    border: 2px solid rgb(74 222 128);;
+}
+
+.modal{
+    font-size: .8rem;
+    color: red;
+    display: none;
+    margin: -5px 5px;
+}
+
+.modal-pass{
+    margin-top: .35em;
+}
+/* JS-class */ 
 @media screen and (min-width: 768px) {
   .img-box {
     display: block;
   }
-  .login-box {
+  .register-box {
     width: 50%;
   }
 }
 ::-webkit-input-placeholder {
   text-align: center;
-  font-size: .95rem;
+  font-size: 0.95rem;
 }
 :-moz-placeholder {
   text-align: center;
