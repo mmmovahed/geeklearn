@@ -41,7 +41,6 @@ class Course extends HTMLElement {
     this.shadowRoot.querySelector('#count-students').innerHTML = this.getAttribute('studentNum')
     this.shadowRoot.querySelector('.title-course').innerHTML = this.getAttribute('title')
     this.shadowRoot.querySelector('.img-course').setAttribute('src', this.getAttribute('image'))
-
   }
 
   static observedAttributes() {
