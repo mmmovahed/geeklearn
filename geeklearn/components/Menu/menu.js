@@ -1,4 +1,4 @@
-let template = document.createElement('template')
+let template = document.createElement("template");
 template.innerHTML = `   
 <link rel="stylesheet" href="./components/Menu/menu.css">
 <link rel="stylesheet" href="./assets/font/font-awesome/all.min.css">
@@ -30,15 +30,14 @@ template.innerHTML = `
 <div class="logo-img">
    <a href="https://sabzlearn.ir"><img src="./assets/image/logo.png" alt=""></a>
 </div>
-</div>`
-
+</div>`;
 
 class Menu extends HTMLElement {
-    constructor(){
-        super()
-        this.attachShadow({mode: 'open'})
-        this.shadowRoot.appendChild(template.content.cloneNode(true))
-    }
+  constructor() {
+    super();
+    this.attachShadow({ mode: "open" });
+    this.shadowRoot.appendChild(template.content.cloneNode(true));
+  }
 }
 
-export {Menu}
+export { Menu };

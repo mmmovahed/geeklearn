@@ -4,7 +4,7 @@ template.innerHTML = `
 <link rel="stylesheet" href="./assets/font/font-awesome/all.min.css" />
 <div class="course">
             <div>
-              <a href="">
+              <a href="./course-page.php">
                 <img
                   src=""
                   alt=""
@@ -14,7 +14,7 @@ template.innerHTML = `
             </div>
             <div class="info">
               <span class="category"></span>
-              <a href="" class="title-course"></a>
+              <a href="./course-page.php" class="title-course"></a>
               <div class="details">
                 <div class="student-container">
                   <span id="count-students"></span>
@@ -35,16 +35,22 @@ class Course extends HTMLElement {
     this.shadowRoot.appendChild(template.content.cloneNode(true));
   }
 
-  connectedCallback (){
-    this.shadowRoot.querySelector('#price').innerHTML = this.getAttribute('price')
-    this.shadowRoot.querySelector('.category').innerHTML = this.getAttribute('category')
-    this.shadowRoot.querySelector('#count-students').innerHTML = this.getAttribute('studentNum')
-    this.shadowRoot.querySelector('.title-course').innerHTML = this.getAttribute('title')
-    this.shadowRoot.querySelector('.img-course').setAttribute('src', this.getAttribute('image'))
+  connectedCallback() {
+    this.shadowRoot.querySelector("#price").innerHTML =
+      this.getAttribute("price");
+    this.shadowRoot.querySelector(".category").innerHTML =
+      this.getAttribute("category");
+    this.shadowRoot.querySelector("#count-students").innerHTML =
+      this.getAttribute("studentNum");
+    this.shadowRoot.querySelector(".title-course").innerHTML =
+      this.getAttribute("title");
+    this.shadowRoot
+      .querySelector(".img-course")
+      .setAttribute("src", this.getAttribute("image"));
   }
 
   static observedAttributes() {
-     return ['title','image','price','studentNum']
+    return ["title", "image", "price", "studentNum"];
   }
 }
 

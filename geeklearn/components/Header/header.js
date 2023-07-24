@@ -1,7 +1,7 @@
-let template = document.createElement('template')
-template.innerHTML = `  <link rel="stylesheet" href="./components/Header/header.css">
+let template = document.createElement("template");
+template.innerHTML = `  
+<link rel="stylesheet" href="./components/Header/header.css">
 <link rel="stylesheet" href="./assets/font/font-awesome/all.min.css">
-
 <div class="mobile-head">
 <div>
     <a href=""><i class="fa-solid fa-cart-shopping icon"></i></a>
@@ -24,15 +24,14 @@ template.innerHTML = `  <link rel="stylesheet" href="./components/Header/header.
     </ul>
 </div>
 </div>
-`
-
+`;
 
 class Header extends HTMLElement {
-    constructor(){
-        super()
-        this.attachShadow({mode: 'open'})
-        this.shadowRoot.appendChild(template.content.cloneNode(true))
-    }
+  constructor() {
+    super();
+    this.attachShadow({ mode: "open" });
+    this.shadowRoot.appendChild(template.content.cloneNode(true));
+  }
 }
 
-export {Header}
+export { Header };
