@@ -1,3 +1,6 @@
+<?php
+require_once "../../init.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,8 +21,13 @@
         <!-- form -->
         <div class="login-box">
           <h2 class="">ورود</h2>
-
+            <?php
+            $main=new helper\Frontend();
+            if($main->post())
+                $main->login(post("email"),post("password"));
+            ?>
           <form id="form" method="post">
+
             <input id="email" type="email" name="email" placeholder="ایمیل" />
             <span class="modal"></span>
             <div class="pass-container">
@@ -32,7 +40,7 @@
               />
               <span class="modal modal-pass"></span>
             </div>
-            <button id="submit" class="btn" type="submit">ورود</button>
+            <button id="submit" class="btn" type="submit" value="1">ورود</button>
           </form>
 
           <div class="line">
