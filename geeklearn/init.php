@@ -5,8 +5,12 @@ ob_start();
 //session_start();
 date_default_timezone_set("Asia/Tehran");
 
-if (stristr($_SERVER["REQUEST_URI"],"/panel/"))
-    require_once "helper/panel.php";
-else
-    require_once "helper/frontend.php";
+if (stristr($_SERVER["REQUEST_URI"],"/panel/")){
+    require_once "helper/Panel.php";
+    $main=new Panel();
+}
+else{
+    require_once "helper/Frontend.php";
+    $main = new Frontend();
+}
 ?>
