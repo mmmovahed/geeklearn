@@ -1,3 +1,4 @@
+import { CourseIntro } from "../../components/Course-intro/course-intro.js";
 import { Course } from "../../components/Course/course.js";
 import { Footer } from "../../components/Footer/footer.js";
 import { Header } from "../../components/Header/header.js";
@@ -10,3 +11,4 @@ window.customElements.define('site-menu', Menu)
 window.customElements.define('site-search-box', Searchbox)
 window.customElements.define('site-course', Course)
 window.customElements.define('site-footer', Footer)
+window.customElements.define('course-intro',CourseIntro)
