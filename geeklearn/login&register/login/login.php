@@ -22,12 +22,12 @@ require_once "../../init.php";
         <div class="login-box">
           <h2 class="">ورود</h2>
             <?php
-            $main=new helper\Frontend();
-            if($main->post())
-                $main->login(post("email"),post("password"));
+            if (isset($_POST['submit']))
+                echo "HI";
+//            if($main->post('submit'))
+//                $main->login(post('email'),post('password'));
             ?>
-          <form id="form" method="post">
-
+          <form id="form" action="login.php" method="post">
             <input id="email" type="email" name="email" placeholder="ایمیل" />
             <span class="modal"></span>
             <div class="pass-container">
@@ -40,7 +40,7 @@ require_once "../../init.php";
               />
               <span class="modal modal-pass"></span>
             </div>
-            <button id="submit" class="btn" type="submit" value="1">ورود</button>
+              <button id="submit" class="btn" type="submit" name="submit" value="1">ورود</button>
           </form>
 
           <div class="line">
@@ -54,7 +54,7 @@ require_once "../../init.php";
 
           <div class="reg-container">
             <button class="btn">
-              <a href="../register/Register.html"> ثبت نام</a>
+              <a href="../register/Register.php"> ثبت نام</a>
             </button>
             <p>حساب کاربری دارید؟</p>
           </div>

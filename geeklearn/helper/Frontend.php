@@ -1,8 +1,7 @@
 <?php
-//defined("DB_HOST") or die;
-class Frontend extends Base
+defined("DB_HOST") or die;
+class Frontend extends base
 {
-
     public function login($username,$password)
     {
         $sql = "SELECT email, password FROM users WHERE email=".'$email'." AND password=".'$password';

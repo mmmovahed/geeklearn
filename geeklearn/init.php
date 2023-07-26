@@ -4,7 +4,8 @@ error_reporting(-1);
 ob_start();
 //session_start();
 date_default_timezone_set("Asia/Tehran");
-
+require_once 'config/config.php';
+require_once 'helper/Base.php';
 if (stristr($_SERVER["REQUEST_URI"],"/panel/")){
     require_once "helper/Panel.php";
     $main=new Panel();
