@@ -67,62 +67,7 @@
   max-width: 1200px;
   margin: 1em auto;
 }
-.video-container {
-  position: relative;
-  width: 50%;
-  max-width: 95%;
-  margin-inline: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* margin-left: 0.5em; FOR MOBILE IS NOT GOOD */
-  border: 1px solid red;
-}
-#intro {
-  width: 100%;
-  /* height: 500px; */
-}
-.video-controls-container {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  color: white;
-  z-index: 100;
-  opacity: 0;
-  transition: opacity 150ms ease-in-out;
-}
-.video-container:hover .video-controls-container,
-.video-container.paused .video-controls-container,
-.video-container:focus-within .video-controls-container {
-  opacity: 1;
-}
-.video-controls-container .controls {
-  display: flex;
-  gap: 0.5rem;
-  padding: 0.25rem;
-  align-items: center;
-}
-.video-controls-container .controls button {
-  background: none;
-  border: none;
-  color: inherit;
-  padding: 0;
-  width: 30px;
-  height: 30px;
-  font-size: 1.1rem;
-  cursor: pointer;
-  opacity: 0.85;
-  transition: opacity 150ms ease-in-out;
-}
-.video-controls-container .controls button:hover{
-  opacity: 1;
-}
-.video-container.paused .pause-icon {
-  display: none;
-}
-.video-container:not(.paused) .play-icon {
-  display: none;
-}
+
 
 .course-details {
   border: 1px solid skyblue;

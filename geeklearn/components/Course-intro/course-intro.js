@@ -2,6 +2,7 @@ let template = document.createElement("template");
 template.innerHTML = ` 
 <link rel="stylesheet" href="./components/Course-intro/course-intro.css">
 <link rel="stylesheet" href="./assets/font/font-awesome/all.min.css">
+
 <div id="refer-box">
 <ul>
     <li class="refer-item"><a href="">معرفی دوره</a></li>
@@ -14,21 +15,7 @@ template.innerHTML = `
 <h2>آموزش کتابخانه ری اکت</h2>
 </div>
 <div class="course-info">
-<div class="video-container paused">
-    <div class="video-controls-container">
-    <div class="timeline-container"></div>
-    <div class="controls">
-    <button class="play-pause-btn">
-    <i class="fa-solid fa-play play-icon"></i>
-    <i class="fa-solid fa-pause pause-icon"></i>
-    </button>
-    </div>
-    </div>
-    <video id="intro">
-        <source type="video/mp4" src="./assets/image/ab.mp4">
-        </source>
-    </video>
-</div>
+
 <div class="course-details">
     <div class="score-category">
         <div>
@@ -79,32 +66,7 @@ class CourseIntro extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
     this.shadowRoot.appendChild(template.content.cloneNode(true));
-    const playPauseBtn = this.shadowRoot.querySelector(".play-pause-btn");
-    const video = this.shadowRoot.querySelector("video");
-    const videoContainer = this.shadowRoot.querySelector(".video-container");
-    document.addEventListener("keydown", (e) => {
-      e.key === " " ? e.preventDefault() : true;
-      switch (e.key.toLowerCase()) {
-        case " ":
-        case "k":
-          togglePlay();
-          break;
-      }
-    });
-
-    video.addEventListener("click", togglePlay);
-    playPauseBtn.addEventListener("click", togglePlay);
-    video.addEventListener("play", () => {
-      videoContainer.classList.remove("paused");
-    });
-
-    video.addEventListener("pause", () => {
-      videoContainer.classList.add("paused");
-    });
-
-    function togglePlay() {
-      video.paused ? video.play() : video.pause();
-    }
+  
   }
 }
 
