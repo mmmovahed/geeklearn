@@ -74,7 +74,7 @@
             <hr class="" />
           </div>
           <div class="log-container">
-            <button class="btn"><a href="../login/login.html">ورود</a></button>
+            <button class="btn"><a href="../login/login.php">ورود</a></button>
             <p>حساب کاربری دارید؟</p>
           </div>
         </div>

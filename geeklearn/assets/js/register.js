@@ -8,9 +8,24 @@ const password = $.querySelector("#password");
 const rePassword = $.querySelector("#password2");
 
 registerForm.addEventListener("submit", (event) => {
-  event.preventDefault();
   checkInputs();
+  if (isFormValid() == true) {
+    registerForm.submit();
+  } else {
+    event.preventDefault();
+  }
 });
+
+function isFormValid() {
+  const inputs = registerForm.querySelectorAll("input");
+  let result = true;
+  inputs.forEach((input) => {
+    if (input.classList.contains("error")) {
+      result = false;
+    }
+  });
+  return result;
+}
 
 function checkInputs() {
   const userNameValue = userName.value.trim();
@@ -59,13 +74,13 @@ function checkInputs() {
 
 function setErrorFor(input, message) {
   input.classList.remove("border-green");
-  input.classList.add("border-red");
+  input.classList.add("border-red","error");
   input.nextElementSibling.innerHTML = message;
   input.nextElementSibling.style.display = "block";
 }
 
 function setSuccessFor(input) {
-  input.classList.remove("border-red");
+  input.classList.remove("border-red","error");
   input.classList.add("border-green");
   input.nextElementSibling.style.display = "none";
 }

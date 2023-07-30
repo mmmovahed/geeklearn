@@ -5,10 +5,25 @@ const password = $.querySelector("#password");
 const email = $.querySelector("#email");
 
 registerForm.addEventListener("submit", (event) => {
-  event.preventDefault();
   checkInputs();
+
+  if (isFormValid() == true) {
+    registerForm.submit();
+  } else {
+    event.preventDefault();
+  }
 });
 
+function isFormValid() {
+  const inputs = registerForm.querySelectorAll("input");
+  let result = true;
+  inputs.forEach((input) => {
+    if (input.classList.contains("error")) {
+      result = false;
+    }
+  });
+  return result;
+}
 function checkInputs() {
   const emailValue = email.value.trim();
   const passwordValue = password.value.trim();
@@ -22,21 +37,19 @@ function checkInputs() {
   }
   if (passwordValue === "") {
     setErrorFor(password, ".فیلد را پر کنید");
-  }
-   else {
+  } else {
     setSuccessFor(password);
   }
 }
 
 function setErrorFor(input, message) {
-  input.classList.add("border-red");
-  console.log(input.nextElementSibling);
+  input.classList.add("border-red", "error");
   input.nextElementSibling.innerHTML = message;
   input.nextElementSibling.style.display = "block";
 }
 
 function setSuccessFor(input) {
-  input.classList.remove("border-red");
+  input.classList.remove("border-red", "error");
   input.nextElementSibling.style.display = "none";
 }
 
@@ -65,4 +78,3 @@ eyeIcon.addEventListener("click", () => {
     isHide = true;
   }
 });
-
