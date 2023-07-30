@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../assets/css/register.css" />
-    <link rel="stylesheet" href="../../assets/font/font-awesome/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/register.css" />
+    <link rel="stylesheet" href="./assets/font/font-awesome/all.min.css" />
     <title>ثبت نام</title>
   </head>
   <body>
@@ -13,7 +13,7 @@
       <div class="container">
         <!-- image -->
         <div class="img-box">
-          <img class="img" src="../../assets/image/photo-Login.jpg" alt="" />
+          <img class="img" src="./assets/image/photo-Login.jpg" alt="" />
         </div>
         <!-- form -->
         <div class="register-box">
@@ -74,12 +74,12 @@
             <hr class="" />
           </div>
           <div class="log-container">
-            <button class="btn"><a href="../login/login.php">ورود</a></button>
+            <button class="btn"><a href="login.php">ورود</a></button>
             <p>حساب کاربری دارید؟</p>
           </div>
         </div>
       </div>
     </section>
-    <script src="../../assets/js/register.js"></script>
+    <script src="./assets/js/register.js"></script>
   </body>
 </html>
