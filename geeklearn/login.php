@@ -11,8 +11,6 @@
     <title>ورود</title>
   </head>
   <body>
-    <my-alert title="helooo" icon="fa-check"></my-alert>
-    <my-alert title="helooo" icon="fa-xmark"></my-alert>
     <section class="main">
       <!-- Login container -->
       <div class="container">
