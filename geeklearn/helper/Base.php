@@ -8,9 +8,6 @@ abstract class Base
         $this->dblink=mysqli_connect(DB_HOST,DB_USERNAME,DB_PASSWORD) or die;
         mysqli_select_db($this->dblink,DB_NAME) or die;
     }
-
-
-
     public function query($q)
     {
         $result=mysqli_query($this->dblink,$q);
