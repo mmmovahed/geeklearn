@@ -30,7 +30,7 @@
             if(isset($_GET["login_status"])&& $_GET["login_status"]=="successfully")
                 $main->setSuccessMessage("لاگین با موفقیت انجام شد");
             else if(isset($_GET["login_status"]) AND $_GET["login_status"]=="failed")
-                $main->setDangerMessage("لاگین با موفقیت انجام نشد");
+                $main->setDangerMessage("دوباره سعی کنید.");
 
 
             ?>

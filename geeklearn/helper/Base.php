@@ -43,12 +43,12 @@ abstract class Base
 
     public function setSuccessMessage($message)
     {
-            print("<div class='alert alert-success'>$message</div>");
+            print("<my-alert title='$message' icon='fa-check'></my-alert>");
     }
 
     public function setDangerMessage($message)
     {
-            print("<div class='alert alert-danger'>$message</div>");
+        print("<my-alert title='$message' icon='fa-xmark'></my-alert>");
     }
     public function redirect($url)
     {
