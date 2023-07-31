@@ -4,16 +4,16 @@ class Frontend extends base
 {
     public function login($username,$password)
     {
-        $sql = "SELECT email, password FROM users WHERE email=".'$email'." AND password=".'$password';
-        $result = $this->query($sql);
+        $sql = "SELECT `email`, `password` FROM `tbl_users` WHERE `email`='$username' AND `password`='$password' ";
+        $result = $this->selectData($sql);
 
         if ($result->num_rows > 0) {
             // output data of each row
-            while($row = $result->fetch_assoc()) {
-                $this->redirect("../login&register/login/login.php?login_status=true");
-            }
+            $row = $result->fetch_assoc();
+            $this->redirect("../login/login.php?login_status=successfully");
+            $message="asd0";
         } else {
-            $this->redirect("../login&register/login/login.php?login_status=false");
+            $this->redirect("../login/login.php?login_status=failed");
 
         }
     }

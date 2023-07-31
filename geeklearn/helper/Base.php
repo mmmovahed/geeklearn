@@ -15,8 +15,16 @@ abstract class Base
             return mysqli_insert_id($this->dbLink);
         else if(stristr($q,'update') || stristr($q,'delete'))
             return mysqli_affected_rows($this->dbLink);
+        else if(stristr($q,'select'))
+            return $result = $dblink->query($q);
         else
             return $result;
+    }
+
+    public function selectData($q)
+    {
+        $result = mysqli_query($this->dblink,$q);
+        return $result;
     }
     public function post($key)
     {
@@ -33,18 +41,19 @@ abstract class Base
             return '';
     }
 
-    public function setSuccessMessage($key,$message)
+    public function setSuccessMessage($message)
     {
-        if ($this->get($key) == $key){
             print("<div class='alert alert-success'>$message</div>");
-        }
     }
 
-    public function setDangerMessage($key,$message)
+    public function setDangerMessage($message)
     {
-        if ($this->get($key) == $key){
             print("<div class='alert alert-danger'>$message</div>");
-        }
+    }
+    public function redirect($url)
+    {
+        header("location:$url");
+        die;//security fix bug
     }
 
 

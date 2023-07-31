@@ -22,10 +22,16 @@
         <div class="login-box">
           <h2 class="">ورود</h2>
             <?php
-            if (isset($_POST['submit']))
-                echo "HI";
-//            if($main->post('submit'))
-//                $main->login(post('email'),post('password'));
+            if ($main instanceof Frontend)
+                if (isset($_POST['submit'])){
+                    $main->login($_POST["email"],$_POST["password"]);
+                }
+            if(isset($_GET["login_status"])&& $_GET["login_status"]=="successfully")
+                $main->setSuccessMessage("لاگین با موفقیت انجام شد");
+            else if(isset($_GET["login_status"]) AND $_GET["login_status"]=="failed")
+                $main->setDangerMessage("لاگین با موفقیت انجام نشد");
+
+
             ?>
           <form id="form" action="login.php" method="post">
             <input id="email" type="email" name="email" placeholder="ایمیل" />
