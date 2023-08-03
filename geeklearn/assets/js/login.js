@@ -1,3 +1,6 @@
+import { Alert } from "../../components/Alert/alert.js";
+
+window.customElements.define('my-alert', Alert)
 const $ = document;
 const registerForm = $.querySelector("#form");
 const eyeIcon = $.querySelector("#eye");

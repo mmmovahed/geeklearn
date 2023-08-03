@@ -1,11 +1,11 @@
 let template = document.createElement("template");
 template.innerHTML = `  
-<link rel="stylesheet" href="./components/Alert/alert.css">
-<link rel="stylesheet" href="./assets/font/font-awesome/all.min.css">
+<link rel="stylesheet" href="../components/Alert/alert.css">
+<link rel="stylesheet" href="../assets/font/font-awesome/all.min.css">
 <div class="container">
 <div class="status"><i class="fa-solid "></i></i></div>
 <p class="title-notif">این یک پیغام آزمایشی است.</p>
-<button><i class="fa-solid fa-square-xmark"></i></button>
+<button class="ss"><i class="fa-solid fa-xmark"></i></button>
 <div class="prograss-bar"></div>
 </div>
 
@@ -16,7 +16,6 @@ class Alert extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
-    const alertContainer = this.shadowRoot.querySelector(".container");
     this.shadowRoot.appendChild(template.content.cloneNode(true));
 
     // let style = getComputedStyle(alertContainer);

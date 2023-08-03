@@ -14,7 +14,7 @@
   font-family: "yekan";
 }
 body {
-  background-color: #242532;
+  background-color: #ffffff;
 }
 
 .container {
@@ -27,16 +27,28 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  min-height: 460px;
-  max-height: 460px;
-  background-image: url(/assets/image/header-img.jpg);
+  min-height: 700px;
+  max-height: 700px;
+  background-image: url(../image/header-img.jpg);
   background-repeat: no-repeat;
   background-position: top;
+  background-size: cover;
+  position: relative;
+}
+#top-page::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  min-height: 100px;
+  bottom: -50px;
+  right: 0;
+  background-image: url(../image/wave.png);
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
 #header {
-  background-color: rgba(40, 41, 56, 0.6);
+  background-color: rgba(0, 0, 0, 0.25);
   width: 100%;
   min-height: 32px;
   max-height: 32px;
@@ -45,12 +57,14 @@ body {
   width: 100%;
   min-height: 62px;
   max-height: 62px;
-  border-bottom: 1px solid #696a76;
+  margin-top: 0.5rem;
 }
 #search-box {
   width: 100%;
-  min-height: 240px;
-  max-height: 240px;
+  min-height: 580px;
+  max-height: 580px;
+  padding: 1rem 0;
+  overflow-y: hidden;
 }
 #main {
   display: flex;

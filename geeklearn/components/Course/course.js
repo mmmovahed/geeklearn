@@ -13,17 +13,20 @@ template.innerHTML = `
               </a>
             </div>
             <div class="info">
-              <span class="category"></span>
-              <a href="./course-page.php" class="title-course"></a>
-              <div class="details">
-                <div class="student-container">
-                  <span id="count-students"></span>
-                  <span>دانشجو</span>
+            <a href="./course-page.php" class="course-title"></a>
+            <div class="teacher-container">
+            <i class="fa-solid fa-user"></i>
+            <a href="./course-page.php" class="course-teacher"></a>
+            </div>
+            <div class="details">
+                <div class="duration-container">
+                <i class="fa-regular fa-clock"></i>
+                <span id="course-duration"></span>
                 </div>
-                <div class="price-container">
-                  <span>تومان</span>
-                  <span id="price"></span>
-                </div>
+                  <div class="price-container">
+                    <span id="price"></span>
+                    <span >تومان</span>
+                  </div>
               </div>
             </div>
 </div>`;
@@ -38,19 +41,21 @@ class Course extends HTMLElement {
   connectedCallback() {
     this.shadowRoot.querySelector("#price").innerHTML =
       this.getAttribute("price");
-    this.shadowRoot.querySelector(".category").innerHTML =
-      this.getAttribute("category");
-    this.shadowRoot.querySelector("#count-students").innerHTML =
-      this.getAttribute("studentNum");
-    this.shadowRoot.querySelector(".title-course").innerHTML =
-      this.getAttribute("title");
+    this.shadowRoot.querySelector(".course-teacher").innerHTML =
+      this.getAttribute("teacher");
+    this.shadowRoot.querySelector(".course-title").innerHTML =
+      this.getAttribute("title-course");
     this.shadowRoot
       .querySelector(".img-course")
       .setAttribute("src", this.getAttribute("image"));
+      
+      this.shadowRoot.querySelector("#course-duration").innerHTML =
+      this.getAttribute("duration");
   }
+  
 
   static observedAttributes() {
-    return ["title", "image", "price", "studentNum"];
+    return ["title-course", "image", "price", "teacher","duration"];
   }
 }
 

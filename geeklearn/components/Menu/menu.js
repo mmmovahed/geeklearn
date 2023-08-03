@@ -13,7 +13,7 @@ template.innerHTML = `
             <li>
             <form class="search-menu">
             <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-            <input type="search" name="" id="search-input" placeholder="جستجو...">
+            <input type="search" name="" id="search-input" placeholder="جستجو..." autocomplete="off">
             </form>
             </li>
         </li>
@@ -37,6 +37,12 @@ class Menu extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
     this.shadowRoot.appendChild(template.content.cloneNode(true));
+    this.shadowRoot.querySelector("#search-input").addEventListener("focus", e => {
+        e.target.parentElement.style.outline = "1px solid gray"
+    })
+    this.shadowRoot.querySelector("#search-input").addEventListener("blur", e => {
+        e.target.parentElement.style.outline = "none"
+    })
   }
 }
 

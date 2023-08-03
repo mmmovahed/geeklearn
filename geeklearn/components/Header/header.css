@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'yekan';
+    --gray:#d1cfcfcc;
 }
 .top-bar{
     font-size: .9rem;
@@ -22,7 +23,11 @@
     justify-content: flex-start;
     width: 28%;
     height: 90%;
-    color: #fff;    
+       
+}
+.social-media span{
+    color: var(--gray); 
+    letter-spacing: .2em;
 }
 .quick-acc{
     width: 30%;
@@ -41,19 +46,20 @@
 }
 
  .item{
-   color: #ffffffcc;
+   color: var(--gray);
    text-decoration: none;
    transition: .2s all;
  }
- .item:hover{
-    color: #fff;
- }
-.social-media .icon{
-    color: #fff;
-    margin: 0 .2em;
- }
+ .social-media .icon{
+     color: var(--gray);
+     margin: 0 .2em;
+    }
+    .item:hover,.social-media .icon:hover{
+       color: #fff;
+    }
+ 
  .mobile-head .icon{
-    color: #fff;
+    color: var(--gray);
     font-size: 1.5rem;
     margin: 0 .1em;
  }

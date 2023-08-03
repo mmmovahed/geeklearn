@@ -28,9 +28,10 @@ require_once "init.php";
     </div>
     <main id="main">
       <div class="courses-container">
-        <site-course title="JS Course" image="./assets/image/header-img.jpg" category="امنیت" price="25,000" studentNum="17"></site-course>
-        <site-course title="JS Course" image="./assets/image/header-img.jpg" category="امنیت" price="25,000" studentNum="17"></site-course>
-        <site-course title="JS Course" image="./assets/image/header-img.jpg" category="امنیت" price="25,000" studentNum="17"></site-course>
+        <site-course title-course="آموزش جاوا اسکریپت مقدماتی" image="./assets/image/header-img.jpg" category="امنیت" price="25,000" teacher="حسینی" duration="12:02"></site-course>
+        <site-course title-course="آموزش جاوا اسکریپت مقدماتی" image="./assets/image/header-img.jpg" category="امنیت" price="25,000" teacher="حسینی"></site-course>
+        <site-course title-course="آموزش جاوا اسکریپت مقدماتی" image="./assets/image/header-img.jpg" category="امنیت" price="25,000" teacher="حسینی"></site-course>
+        <site-course title-course="آموزش جاوا اسکریپت مقدماتی" image="./assets/image/header-img.jpg" category="امنیت" price="25,000" teacher="حسینی"></site-course>
       </div>
     </main>
     <footer id="footer">

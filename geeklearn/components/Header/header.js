@@ -15,7 +15,7 @@ template.innerHTML = `
     <a href=""><i class="fa-brands fa-telegram icon"></i></a>     
     <a href=""><i class="fa-brands fa-instagram icon"></i></a>     
     <a href=""><i class="fa-brands fa-youtube icon"></i></a>          
-    <span style="margin-left: .5em;">sina.sheykh@gmail.com</span>
+    <span style="margin-left: .5em;">Geeklearn@gmail.com</span>
 </div>
 <div class="quick-acc">
     <ul>

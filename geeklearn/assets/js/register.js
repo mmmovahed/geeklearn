@@ -1,3 +1,7 @@
+import { Alert } from "../../components/Alert/alert.js";
+
+window.customElements.define("my-alert", Alert);
+
 const $ = document;
 const registerForm = $.querySelector("#form");
 const eyeIcon = $.querySelector("#eye");
@@ -74,13 +78,13 @@ function checkInputs() {
 
 function setErrorFor(input, message) {
   input.classList.remove("border-green");
-  input.classList.add("border-red","error");
+  input.classList.add("border-red", "error");
   input.nextElementSibling.innerHTML = message;
   input.nextElementSibling.style.display = "block";
 }
 
 function setSuccessFor(input) {
-  input.classList.remove("border-red","error");
+  input.classList.remove("border-red", "error");
   input.classList.add("border-green");
   input.nextElementSibling.style.display = "none";
 }
