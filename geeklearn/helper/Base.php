@@ -11,14 +11,19 @@ abstract class Base
     public function query($q)
     {
         $result=mysqli_query($this->dblink,$q);
-        if(stristr($q,'insert'))
+        if(stristr($q,'INSERT'))
             return mysqli_insert_id($this->dbLink);
-        else if(stristr($q,'update') || stristr($q,'delete'))
+        else if(stristr($q,'UPDATE') || stristr($q,'DELETE'))
             return mysqli_affected_rows($this->dbLink);
-        else if(stristr($q,'select'))
-            return $result = $dblink->query($q);
         else
             return $result;
+    }
+
+    public function queryForInsertData($q)
+    {
+//        $result = $this->dblink->query($q);
+        $result=mysqli_query($this->dblink,$q);
+        return $result;
     }
 
     public function selectData($q)
@@ -43,12 +48,12 @@ abstract class Base
 
     public function setSuccessMessage($message)
     {
-            print("<div class='alert alert-success'>$message</div>");
+            print("<my-alert title='$message' icon='fa-check'></my-alert>");
     }
 
     public function setDangerMessage($message)
     {
-            print("<div class='alert alert-danger'>$message</div>");
+        print("<my-alert title='$message' icon='fa-xmark'></my-alert>");
     }
     public function redirect($url)
     {
@@ -56,6 +61,11 @@ abstract class Base
         die;//security fix bug
     }
 
+    public function currentTime()
+    {
+        $date=date("Y-m-d H:i:s");
+        return $date;
+    }
 
 
     public function __destruct()
