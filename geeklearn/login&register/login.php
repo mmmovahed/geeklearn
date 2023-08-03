@@ -1,13 +1,13 @@
 <?php
-  require_once "./init.php";
+  require_once "../init.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/login.css" />
-    <link rel="stylesheet" href="./assets/font/font-awesome/all.min.css" />
+    <link rel="stylesheet" href="../assets/css/login.css" />
+    <link rel="stylesheet" href="../assets/font/font-awesome/all.min.css" />
     <title>ورود</title>
   </head>
   <body>
@@ -16,7 +16,7 @@
       <div class="container">
         <!-- image -->
         <div class="img-box">
-          <img class="img" src="./assets/image/photo-Login.jpg" alt="pic" />
+          <img class="img" src="../assets/image/photo-Login.jpg" alt="pic" />
         </div>
         <!-- form -->
         <div class="login-box">
@@ -69,7 +69,7 @@
         </div>
       </div>
     </section>
-    <script src="./assets/js/login.js"></script>
-    <script type="module" src="./assets/js/app.js"></script>
+    <script src="../assets/js/login.js" type="module"></script>
+    
   </body>
 </html>

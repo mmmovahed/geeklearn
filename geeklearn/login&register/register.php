@@ -1,13 +1,13 @@
 <?php
-require_once "init.php";
+require_once "../init.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/register.css" />
-    <link rel="stylesheet" href="./assets/font/font-awesome/all.min.css" />
+    <link rel="stylesheet" href="../assets/css/register.css" />
+    <link rel="stylesheet" href="../assets/font/font-awesome/all.min.css" />
     <title>ثبت نام</title>
   </head>
   <body>
@@ -16,7 +16,7 @@ require_once "init.php";
       <div class="container">
         <!-- image -->
         <div class="img-box">
-          <img class="img" src="./assets/image/photo-Login.jpg" alt="" />
+          <img class="img" src="../assets/image/photo-Login.jpg" alt="" />
         </div>
         <!-- form -->
         <div class="register-box">
@@ -93,6 +93,6 @@ require_once "init.php";
         </div>
       </div>
     </section>
-    <script src="./assets/js/register.js"></script>
+    <script src="../assets/js/register.js" type="module"></script>
   </body>
 </html>
