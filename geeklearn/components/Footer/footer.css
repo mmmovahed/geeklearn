@@ -1,16 +1,16 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "yekan";
-  }
-h5{
-    color: antiquewhite;
-    font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "yekan";
+}
+h5 {
+  color: antiquewhite;
+  font-size: 1.5rem;
 }
 
-@media screen and (max-width:600px){
-    h5{
-        font-size: 1.2rem;
-    }
+@media screen and (max-width: 600px) {
+  h5 {
+    font-size: 1.2rem;
+  }
 }

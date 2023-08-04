@@ -35,7 +35,7 @@ require_once "init.php";
       </div>
     </main>
     <footer id="footer">
-      <site-footer></site-footer>
+      <site-footer><site-header/></site-footer>
     </footer>
   </div>
   <script type="module" src="./assets/js/app.js"></script>
