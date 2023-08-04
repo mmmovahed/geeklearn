@@ -1,3 +1,6 @@
+<?php
+require_once "init.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,13 +21,23 @@
         <!-- form -->
         <div class="register-box">
           <h2 class="">ثبت نام</h2>
+            <?php
+            if ($main instanceof Frontend)
+                if (isset($_POST["reg_btn"]))
+                    $main->createUser("$_POST[phone]","$_POST[email]","$_POST[password]");
+
+            if(isset($_GET["register_status"]) && $_GET["register_status"]=="successfully")
+                echo("عضویت با موفقیت انجام شد");
+            else if(isset($_GET["register_status"]) AND $_GET["register_status"]=="failed")
+               echo("ایمیل یا موبایل وارد شده قبلا ثبت شده است.");
+            ?>
           <form id="form" action="" method="post" class="">
             <input
               class="first-name"
               id="username"
               type="text"
               name="fname"
-              placeholder="نام کاربری"
+              placeholder="حذف شود..."
             />
             <span class="modal"></span>
             <input
@@ -65,7 +78,7 @@
             />
             <span class="modal"></span>
 
-            <button id="submit" class="btn" type="submit">ثبت نام</button>
+            <button id="submit" name="reg_btn" class="btn" type="submit">ثبت نام</button>
           </form>
 
           <div class="line">
