@@ -4,9 +4,16 @@
   box-sizing: border-box;
   font-family: "yekan";
 }
+#search-box {
+  width: 100%;
+  min-height: 580px;
+  max-height: 580px;
+  padding: 1rem 0;
+  overflow-y: hidden;
+}
 .search-box {
   width: 100%;
-  max-width: 1080px;
+  max-width: 1200px;
   margin: 0 auto;
   height: 100%;
   display: flex;
@@ -18,7 +25,7 @@
 #search {
   border: 0;
   outline: none;
-  width: 90%;
+  width: 80%;
   background: transparent;
   border-radius: 50px;
   color: #fff;
@@ -40,7 +47,6 @@
   width: 70%;
   background: rgba(255, 255, 255, 0.2);
   display: flex;
-  justify-content: flex-end;
   align-items: center;
   border-radius: 60px;
   padding: 0.5em;
@@ -60,18 +66,20 @@
   font-size: 2rem;
 }
 .search-container {
-  width: 85%;
+  width: 75%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 1rem;
+
 }
 .slogan {
-  width: 85%;
+  width: 75%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 4rem;
+
 }
 .slogan p {
   color: #fff;
@@ -80,7 +88,7 @@
   text-align: center;
 }
 .information {
-  width: 85%;
+  width: 75%;
   display: flex;
   justify-content: center;
   gap: 15%;
@@ -104,8 +112,8 @@
 .details .count {
   margin-top: 1rem;
 }
-.details img{
-    width: 70%;
+.details img {
+  width: 70%;
 }
 
 @media screen and (max-width: 850px) {

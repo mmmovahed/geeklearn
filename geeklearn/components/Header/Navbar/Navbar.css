@@ -2,38 +2,49 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "yekan";
+}
+#navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 72px;
 }
 #masthead {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
   width: 100%;
   max-width: 1200px;
+  height: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   margin: 0 auto;
-  padding: 10px;
+  padding: 0.5rem 0.5rem;
 }
 .logo-img {
-  width: 5%;
-  min-width: 90px;
-  height: 50%;
+  min-width: 70px;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0.1rem;
 }
 .logo-img a {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  width: 60%;
 }
 .logo-img img {
-  width: 70px;
+  width: 100%;
+  /* height: 100%; */
+  object-fit: contain;
 }
 #menu {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
-  width: 50%;
-  margin-right: 0.5em;
+  width: 35%;
+  height: 90%;
+  margin-right: 1rem;
+
+  padding-right: 0.2rem;
 }
 #menu ul {
   list-style-type: none;
@@ -55,20 +66,24 @@
   width: 100%;
   height: 2px;
   transition: 0.3s ease-in-out;
-  transform:scale(0);
+  transform: scale(0);
 }
 .item-menu a:hover::after {
   transform: scale(1);
 }
 .left-menu {
-  width: 22%;
-  min-width: 250px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 30%;
+  height: 90%;
   margin-right: auto;
+  padding-left: 0.2rem;
 }
 .left-menu ul {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: flex-end;
   gap: 1em;
   list-style-type: none;
 }
@@ -76,15 +91,14 @@
   color: #fff;
 }
 .left-menu ul a:hover {
-    color: rgba(255, 255, 255,.8);
-  }
+  color: rgba(255, 255, 255, 0.8);
+}
 #search-input {
   border: 0;
   outline: none;
   flex: 1;
   background: transparent;
   border-radius: 50px;
-  direction: rtl;
   color: #fff;
   padding: 0.2em;
   font-size: 1rem;
@@ -101,7 +115,7 @@
   width: 100%;
   background: rgba(255, 255, 255, 0.2);
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   border-radius: 60px;
   padding: 2px 4px;
 }
@@ -113,8 +127,7 @@
   cursor: pointer;
   background: transparent;
   color: #fff;
-  margin-left: 5px;
 }
 .search-menu button i {
-  font-size: 1.2rem;
+  font-size: .9rem;
 }

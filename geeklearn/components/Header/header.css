@@ -1,87 +1,19 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'yekan';
-    --gray:#d1cfcfcc;
-}
-.top-bar{
-    font-size: .9rem;
-    height: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    padding: 10px;
-    
-}
-.social-media{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 28%;
-    height: 90%;
-       
-}
-.social-media span{
-    color: var(--gray); 
-    letter-spacing: .2em;
-}
-.quick-acc{
-    width: 30%;
-    height: 90%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "yekan";
 }
 
-.quick-acc > ul{
-    list-style-type: none;
-    display: flex;
-    justify-content: flex-end;
-    gap: 1em;
-    width: 100%;
+#top-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 700px;
+  max-height: 700px;
+  background-image: url(../../assets/image/header-img.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  position: relative;
 }
-
- .item{
-   color: var(--gray);
-   text-decoration: none;
-   transition: .2s all;
- }
- .social-media .icon{
-     color: var(--gray);
-     margin: 0 .2em;
-    }
-    .item:hover,.social-media .icon:hover{
-       color: #fff;
-    }
- 
- .mobile-head .icon{
-    color: var(--gray);
-    font-size: 1.5rem;
-    margin: 0 .1em;
- }
-
-.mobile-head{
-    display: none;
-}
-#logo{
-
-    width: 70px;
-    height: 10%;
-}
-
- @media screen and (max-width:850px) {
-
-    .top-bar{
-        display: none;
-    }
-    .mobile-head{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: .5em .8em;
-    }
- }
