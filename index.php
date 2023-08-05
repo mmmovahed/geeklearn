@@ -14,19 +14,14 @@ require_once "init.php";
 
 <body>
 
-  <div class="container">
+  <div class="main">
     <site-header></site-header>
 
     <main id="main">
-      <div class="courses-container">
-        <site-course title-course="آموزش جاوا اسکریپت مقدماتی" image="./assets/image/header-img.jpg" category="امنیت" price="25,000" teacher="حسینی" duration="12:02"></site-course>
-        <site-course title-course="آموزش جاوا اسکریپت مقدماتی" image="./assets/image/header-img.jpg" category="امنیت" price="25,000" teacher="حسینی"></site-course>
-        <site-course title-course="آموزش جاوا اسکریپت مقدماتی" image="./assets/image/header-img.jpg" category="امنیت" price="25,000" teacher="حسینی"></site-course>
-        <site-course title-course="آموزش جاوا اسکریپت مقدماتی" image="./assets/image/header-img.jpg" category="امنیت" price="25,000" teacher="حسینی"></site-course>
-      </div>
+      <course-container></course-container>
     </main>
     <footer id="footer">
-      <site-footer><site-header /></site-footer>
+      <site-footer></site-footer>
     </footer>
   </div>
   <script type="module" src="./assets/js/app.js" defer></script>

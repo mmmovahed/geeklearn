@@ -15,9 +15,9 @@ class Frontend extends base
         $result = $this->selectData($sql);
         if ($result->num_rows > 0) {
             #$row = $result->fetch_assoc();
-            $this->redirect("/login.php?login_status=successfully");
+            $this->redirect("/geeklearn/login&register/login.php?login_status=successfully");
             } else {
-            $this->redirect("/login.php?login_status=failed");
+            $this->redirect("/geeklearn/login&register/login.php?login_status=failed");
         }
     }
     public function createUser($phone, $email, $password)
@@ -28,16 +28,16 @@ class Frontend extends base
             $sql = "INSERT INTO `tbl_users`(`email`, `phone`, `password`, `created-at`, `last-login`, `privillage-id`, `status`)
             VALUES ('$email','$phone','$password','$date','$date',1,0)";
             if ($this->queryForInsertData($sql) === TRUE) {
-                $this->redirect("/register.php?register_status=successfully");
+                $this->redirect("/geeklearn/login&register/register.php?register_status=successfully");
             }
             else
             {
-                $this->redirect("/register.php?register_status=failed");
+                $this->redirect("/geeklearn/login&register/register.php?register_status=failed");
             }
         }
         else
         {
-            $this->redirect("/register.php?register_status=failed");
+            $this->redirect("/geeklearn/login&register/register.php?register_status=failed");
         }
 
     }

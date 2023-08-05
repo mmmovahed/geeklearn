@@ -20,7 +20,7 @@ body {
   padding: 0;
 }
 
-.container {
+.main {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -59,10 +59,8 @@ body {
   background-color: #2c2d3d;
 }
 
-/* @media screen and (max-width: 575px) {
-  #navbar {
-    display: none;
-  }
+@media screen and (max-width: 575px) {
+
   #header {
     min-height: 55px;
     max-height: 55px;
@@ -74,15 +72,8 @@ body {
   }
 }
 @media screen and (max-width: 850px) and (min-width: 575px) {
-  #navbar {
-    display: none;
-  }
-  #header {
-    min-height: 55px;
-    max-height: 55px;
-    background-color: transparent;
-    border-bottom: 1px solid #696a76;
-  }
+
+
   .courses-container {
     grid-template-columns: auto auto;
   }
@@ -92,4 +83,4 @@ body {
   .courses-container {
     grid-template-columns: auto auto auto;
   }
-} */
+}

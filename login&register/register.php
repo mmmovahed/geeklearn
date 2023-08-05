@@ -27,7 +27,7 @@ require_once "../init.php";
                     $main->createUser("$_POST[phone]","$_POST[email]","$_POST[password]");
 
             if(isset($_GET["register_status"]) && $_GET["register_status"]=="successfully")
-                echo("عضویت با موفقیت انجام شد");
+                echo("<my-alert title='عضویت با موفقیت انجام شد' icon='fa-check'></my-alert>");
             else if(isset($_GET["register_status"]) AND $_GET["register_status"]=="failed")
                echo("ایمیل یا موبایل وارد شده قبلا ثبت شده است.");
             ?>

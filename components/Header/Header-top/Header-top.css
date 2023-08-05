@@ -76,16 +76,11 @@
   height: 10%;
 } */
 
-@media screen and (max-width: 850px) and (min-width: 575px) {
+@media screen and (max-width: 850px) {
   #header-top {
     display: none;
   }
-  /* .mobile-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0.5em 0.8em;
-  } */
+
   .header-top-container {
     min-height: 55px;
     max-height: 55px;
@@ -94,11 +89,4 @@
   }
 }
 
-@media screen and (max-width: 575px) {
-  .header-top-container {
-    min-height: 55px;
-    max-height: 55px;
-    background-color: transparent;
-    border-bottom: 1px solid #696a76;
-  }
-}
+
