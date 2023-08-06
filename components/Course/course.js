@@ -44,7 +44,7 @@ class Course extends HTMLElement {
     this.shadowRoot.querySelector(".course-teacher").innerHTML =
       this.getAttribute("teacher");
     this.shadowRoot.querySelector(".course-title").innerHTML =
-      this.getAttribute("title-course");
+      this.getAttribute("course-title");
     this.shadowRoot
       .querySelector(".img-course")
       .setAttribute("src", this.getAttribute("image"));
@@ -55,7 +55,7 @@ class Course extends HTMLElement {
   
 
   static observedAttributes() {
-    return ["title-course", "image", "price", "teacher","duration"];
+    return ["course-title", "image", "price", "teacher","duration"];
   }
 }
 

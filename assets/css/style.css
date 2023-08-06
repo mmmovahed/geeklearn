@@ -27,7 +27,7 @@ body {
   height: 100vh;
 }
 
-#main {
+.middle {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,8 +41,6 @@ body {
   max-width: 1200px;
   display: grid;
   grid-template-columns: auto auto auto auto;
-  flex-wrap: wrap;
-  flex-grow: 1;
   justify-content: center;
   align-items: flex-start;
   gap: 1.5em 1em;
@@ -60,20 +58,11 @@ body {
 }
 
 @media screen and (max-width: 575px) {
-
-  #header {
-    min-height: 55px;
-    max-height: 55px;
-    background-color: transparent;
-    border-bottom: 1px solid #696a76;
-  }
   .courses-container {
     grid-template-columns: auto;
   }
 }
 @media screen and (max-width: 850px) and (min-width: 575px) {
-
-
   .courses-container {
     grid-template-columns: auto auto;
   }

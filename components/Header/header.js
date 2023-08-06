@@ -3,7 +3,7 @@ let template = document.createElement("template");
 template.innerHTML = `  
 <link rel="stylesheet" href="./assets/font/font-awesome/all.min.css" />
 <link rel="stylesheet" href="./components/Header/Header.css">
-<div id="top-page">
+<div class="header">
 
   <site-header-top></site-header-top>
   <site-navbar></site-navbar>
@@ -18,6 +18,11 @@ class Header extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
     this.shadowRoot.appendChild(template.content.cloneNode(true));
+    if(window.location.href !== "http://geeklearn.ir/" )
+    {
+      this.shadowRoot.querySelector(".header").className += "-course"
+      
+    }
   }
 }
 

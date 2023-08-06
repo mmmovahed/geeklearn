@@ -17,9 +17,15 @@ require_once "init.php";
   <div class="main">
     <site-header></site-header>
 
-    <main id="main">
-      <course-container></course-container>
-    </main>
+    <div class="middle">
+      <div class="courses-container">
+        <site-course course-title="آموزش جاوا اسکریپت مقدماتی" image="./assets/image/header-img.jpg" price="3000" teacher="رضا درویش" duration="12:20"></site-course>
+        <site-course course-title="آموزش جاوا اسکریپت مقدماتی" image="./assets/image/header-img.jpg" price="3000" teacher="رضا درویش" duration="12:20"></site-course>
+        <site-course course-title="آموزش جاوا اسکریپت مقدماتی" image="./assets/image/header-img.jpg" price="3000" teacher="رضا درویش" duration="12:20"></site-course>
+        <site-course course-title="آموزش جاوا اسکریپت مقدماتی" image="./assets/image/header-img.jpg" price="3000" teacher="رضا درویش" duration="12:20"></site-course>
+        <site-course course-title="آموزش جاوا اسکریپت مقدماتی" image="./assets/image/header-img.jpg" price="3000" teacher="رضا درویش" duration="12:20"></site-course>
+      </div>
+    </div>
     <footer id="footer">
       <site-footer></site-footer>
     </footer>
@@ -28,3 +34,5 @@ require_once "init.php";
 </body>
 
 </html>
+
+

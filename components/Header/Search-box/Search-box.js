@@ -49,6 +49,11 @@ class SearchBox extends HTMLElement {
     this.shadowRoot.querySelector("#search").addEventListener("blur", (e) => {
       e.target.parentElement.style.outline = "none";
     });
+    if(window.location.href !== "http://geeklearn.ir/" )
+    {
+      this.shadowRoot.querySelector("#search-box").style.display = "none"
+      
+    }
   }
 }
 

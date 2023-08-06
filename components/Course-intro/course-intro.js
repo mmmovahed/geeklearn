@@ -10,63 +10,50 @@ template.innerHTML = `
     <li class="refer-item"><a href="">نظرات</a></li>
 </ul>
 </div>
-<div id="course-title">
-<h3>خانه/ فرانت اند</h3>
-<h2>آموزش کتابخانه ری اکت</h2>
-</div>
-<div class="course-info">
 
-<div class="course-details">
-    <div class="score-category">
-        <div>
-            <span class="lable-cat">دسته:</span>
-            <a href="" id="category">آموزش فرانت اند</a>
-        </div>
-        <div id="score">
-            <p>score</p>
-        </div>
+<div class="main">
+  <div class="right-side">
+    <h2>sds</h2>
+  </div>
+  <div class="left-side">
+    <div class="course-info">
+      <div class="course-image">
+        <img src="./assets/image/course-img/js-course-img.png" alt="" />
+      </div>
+      <div class="title">
+        <h2>آموزش جاوا اسکریپت مقدماتی</h2>
+        <p>‌کتابخانه‌ها باعث افزایش سرعت کدنویسی میشن. در حدی که تو بازار کار هم از کتابخانه های مختلفی برای توسعه پروژه‌ها استفاده میشه. تو این دوره 20 کتابخانه پرکاربرد و پراستفاده ری‌اکت که تو بازار کار برای توسعه پروژه های مختلفی استفاده میشه رو بصورت پروژه محور یاد میگیری. این موضوع هم سرعت کدنویسی شما رو افزایش میده، هم دستتون تو کدنویسی بازتره و هم شانس استخدامیتون رو بالا می‌بره.</p>
+      </div>
+      <div class="prerequisite">
+      <h4>پیش نیاز های دوره :</h4>
+        <ul>
+             <li>سی شارپ</li>
+        </ul>
+      </div>
     </div>
-    <div class="price-container">
-        <h3>تومان</h3>
-        <h3 id="price">250,000</h3>
+    <div class="cart-container">
+      <div class="cart">
+        <i class="fa-solid fa-user-graduate"></i>
+      </div>
+      <div class="cart">
+        <i class="fa-solid fa-book-open"></i>
+      </div>
+      <div class="cart">
+        <i class="fa-regular fa-clock"></i>
+      </div>
+      <div class="cart">
+        <i class="fa-solid fa-user-tie"></i>
+      </div>
     </div>
-    <div class="course-features">
-        <h4>پشتیبانی کلیه محصولات</h4>
-        <h4>پروژه ها محور بودن دوره </h4>
-        <h4>برگزاری آزمون </h4>
-    </div>
-    <div class="btn-container">
-        <button id="favorite">افزودن به علاقه مندی ها</button>
-        <button id="buy">خرید دوره</button>
-    </div>
+  </div>
 </div>
-
-</div>
-<div class="cart-container">
-<div class="cart">
-    <i class="fa-solid fa-user-graduate"></i>
-</div>
-<div class="cart">
-    <i class="fa-solid fa-book-open"></i>
-</div>
-<div class="cart">
-    <i class="fa-regular fa-clock"></i>
-</div>
-<div class="cart">
-    <i class="fa-solid fa-user-tie"></i>
-</div>
-
-</div>
-<div class="course-desc">
-<p>‌کتابخانه‌ها باعث افزایش سرعت کدنویسی میشن. در حدی که تو بازار کار هم از کتابخانه های مختلفی برای توسعه پروژه‌ها استفاده میشه. تو این دوره 20 کتابخانه پرکاربرد و پراستفاده ری‌اکت که تو بازار کار برای توسعه پروژه های مختلفی استفاده میشه رو بصورت پروژه محور یاد میگیری. این موضوع هم سرعت کدنویسی شما رو افزایش میده، هم دستتون تو کدنویسی بازتره و هم شانس استخدامیتون رو بالا می‌بره.</p>
-</div>`;
+`;
 
 class CourseIntro extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
     this.shadowRoot.appendChild(template.content.cloneNode(true));
-  
   }
 }
 
