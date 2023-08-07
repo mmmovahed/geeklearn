@@ -13,12 +13,54 @@ template.innerHTML = `
 
 <div class="main">
   <div class="right-side">
-    <h2>sds</h2>
+    <div class="details-container">
+      <div class="price-container">
+       <i class="fa-solid fa-dollar-sign"></i>
+       <p>قیمت دوره :</p>
+       <span id="price">20,000</span>
+       <span id="unit">تومان</span>
+      </div>
+      <div class="details">
+        <ul>
+         <li class="details-item">
+          <i class="fa-solid fa-user"></i>
+          <span class="item-title">مدرس دوره:</span>
+          <span class="item-value">ایمان مدائنی</span>
+         </li>
+         <li class="details-item">
+         <i class="fa-solid fa-video"></i>
+         <span class="item-title">تعداد ویدیو ها:</span>
+         <span class="item-value">89</span>
+         </li>
+         <li class="details-item">
+         <i class="fa-regular fa-clock"></i>
+         <span class="item-title">مدت زمان دوره:</span>
+         <span class="item-value">18:12:00</span>
+         </li>
+         <li class="details-item">
+         <i class="fa-solid fa-layer-group"></i>
+         <span class="item-title"> سطح دوره:</span>
+         <span class="item-value">متوسط</span>
+         </li>
+         <li class="details-item">
+         <i class="fa-solid fa-circle-info"></i>
+         <span class="item-title"> وضعیت دوره:</span>
+         <span class="item-value">در حال برگزاری</span>
+         </li>
+         <li class="details-item">
+         <i class="fa-solid fa-calendar-days"></i>
+         <span class="item-title">تاریخ آخرین بروزرسانی:</span>
+         <span class="item-value">1402/05/15</span>
+         </li>
+        </ul>
+        <button class="register">ثبت نام در این دوره</button>
+      </div>
+    </div>
   </div>
   <div class="left-side">
     <div class="course-info">
       <div class="course-image">
-        <img src="./assets/image/course-img/js-course-img.png" alt="" />
+        <img src="./assets/image/course-img/js-course-img.jpg" alt="" />
       </div>
       <div class="title">
         <h2>آموزش جاوا اسکریپت مقدماتی</h2>
@@ -31,20 +73,7 @@ template.innerHTML = `
         </ul>
       </div>
     </div>
-    <div class="cart-container">
-      <div class="cart">
-        <i class="fa-solid fa-user-graduate"></i>
-      </div>
-      <div class="cart">
-        <i class="fa-solid fa-book-open"></i>
-      </div>
-      <div class="cart">
-        <i class="fa-regular fa-clock"></i>
-      </div>
-      <div class="cart">
-        <i class="fa-solid fa-user-tie"></i>
-      </div>
-    </div>
+    
   </div>
 </div>
 `;
