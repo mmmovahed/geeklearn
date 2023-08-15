@@ -5,7 +5,7 @@
   font-family: "yekan";
 }
 
-.header{
+.header {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -18,7 +18,7 @@
   position: relative;
 }
 
-.header-course{
+.header-course {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -26,7 +26,17 @@
   max-height: 110px;
   background-image: url(../../assets/image/header-img.jpg);
   background-repeat: no-repeat;
-  background-position:center;
-  background-size:cover;
-  
+  background-position: center;
+  background-size: cover;
+}
+
+@media screen and (max-width: 850px)  {
+  .header {
+    min-height: 350px;
+    max-height: 350px;
+  }
+  .header-course{
+    min-height: 70px;
+    max-height: 70px;
+  }
 }

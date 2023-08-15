@@ -1,0 +1,309 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "yekan";
+  --lightGreen: #6fc341;
+  --gray: #686e71;
+}
+.container {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem 0;
+  width: 100%;
+  margin: 1rem 0;
+  padding: 1.5rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  border-radius: 5px;
+  border: 1px solid #dddddd;
+}
+.header {
+  display: flex;
+  justify-content:space-between;
+  padding: 1rem 0;
+  align-items: center;
+  width: 100%;
+}
+.header div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .2rem 0;
+}
+.header .right span{
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: .5rem;
+}
+.header .left {
+  color: var(--gray);
+}
+.header .left .course-duration{
+  font-size: 1.05rem;
+  margin-right: .7rem;
+}
+
+/* video player */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  direction: ltr;
+  /* margin-left: 0.5em; FOR MOBILE IS NOT GOOD */
+}
+.video-container.theater,
+.video-container.full-screen {
+  max-width: initial;
+  width: 100%;
+}
+.video-container.theater {
+  max-height: 80vh;
+}
+.video-container.full-screen {
+  max-height: 100vh;
+}
+video {
+  width: 100%;
+}
+.video-container.theater #intro {
+  height: 80vh;
+}
+.video-controls-container {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color: white;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+.video-controls-container::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+  width: 100%;
+  aspect-ratio: 6/1;
+  z-index: -1;
+  pointer-events: none;
+}
+.video-container:hover .video-controls-container,
+.video-container.paused .video-controls-container,
+.video-container:focus-within .video-controls-container {
+  opacity: 1;
+}
+.video-controls-container .controls {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.25rem;
+  align-items: center;
+}
+.video-controls-container .controls button {
+  background: none;
+  border: none;
+  color: inherit;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  opacity: 0.85;
+  transition: opacity 150ms ease-in-out;
+}
+.video-controls-container .controls button:hover {
+  opacity: 1;
+}
+.video-container.paused .pause-icon {
+  display: none;
+}
+.video-container:not(.paused) .play-icon {
+  display: none;
+}
+.video-container.theater .tall {
+  display: none;
+}
+.video-container:not(.theater) .wide {
+  display: none;
+}
+.video-container.full-screen .open,
+.video-container.full-screen .theater-btn,
+.video-container.video-container.full-screen .mini-player-btn {
+  display: none;
+}
+.video-container:not(.full-screen) .close {
+  display: none;
+}
+
+.volume-high-icon,
+.volume-low-icon,
+.volume-muted-icon {
+  display: none;
+}
+
+.video-container[data-volume-level="high"] .volume-high-icon {
+  display: block;
+}
+
+.video-container[data-volume-level="low"] .volume-low-icon {
+  display: block;
+}
+
+.video-container[data-volume-level="muted"] .volume-muted-icon {
+  display: block;
+}
+
+.volume-container {
+  display: flex;
+  align-items: center;
+}
+
+.volume-slider {
+  width: 0;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: width 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.volume-container:hover .volume-slider,
+.volume-slider:focus-within {
+  width: 100px;
+  transform: scaleX(1);
+}
+
+.duration-container {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  flex-grow: 1;
+}
+
+.video-controls-container .controls button.wide-btn {
+  width: 500x;
+}
+
+.timeline-container {
+  height: 7px;
+  margin-inline: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.timeline {
+  background-color: rgba(100, 100, 100, 0.5);
+  height: 3px;
+  width: 100%;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: calc(100% - var(--preview-position) * 100%);
+  background-color: rgb(150, 150, 150);
+  display: none;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: calc(100% - var(--progress-position) * 100%);
+  background-color: red;
+}
+
+.timeline .thumb-indicator {
+  --scale: 0;
+  position: absolute;
+  transform: translateX(-50%) scale(var(--scale));
+  height: 200%;
+  top: -50%;
+  left: calc(var(--progress-position) * 100%);
+  background-color: red;
+  border-radius: 50%;
+  transition: transform 150ms ease-in-out;
+  aspect-ratio: 1 / 1;
+}
+
+.video-container.scrubbing .timeline::before,
+.timeline-container:hover .timeline::before {
+  display: block;
+}
+
+.video-container.scrubbing .thumb-indicator,
+.timeline-container:hover .thumb-indicator {
+  --scale: 1;
+}
+
+.video-container.scrubbing .timeline,
+.timeline-container:hover .timeline {
+  height: 100%;
+}
+
+.speed-btn{
+  line-height: 1.5rem;
+  width: 35px !important;
+}
+/* video-list */
+.video-list-container{
+
+  margin-top: 1rem;
+}
+.video-list-container ul {
+list-style-type: none;
+margin-top: 2rem;
+
+display: flex;
+flex-direction: column;
+gap: 1.5rem;
+}
+.video-list-container ul li{
+  border: 1px dashed  rgb(209, 206, 206);
+  padding: 1rem 2rem;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.video-list-container ul li .count{
+  position: absolute;
+  background-color: #fff;
+  top: 17px;
+  right: -15px;
+  border: 2px solid rgb(180, 180, 180);
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 100%;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.video-list-container ul li .title{
+  font-size: 1rem;
+  border-left: 1px solid #ffdfdf;
+  padding-left: .7rem;
+}
+.video-list-container ul li .duration{
+  border-left: 1px solid #ffdfdf;
+  padding-left: .7rem;
+  color: var(--gray);
+
+}
+@media screen and (max-width: 750px) {
+  .mini-player-btn {
+    display: none;
+  }
+}

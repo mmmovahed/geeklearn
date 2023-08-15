@@ -1,7 +1,7 @@
 let template = document.createElement("template");
 template.innerHTML = ` <link rel="stylesheet" href="./assets/font/font-awesome/all.min.css">
 <link rel="stylesheet" href="./components/Header/Search-box/Search-box.css">
-<div id="search-box">
+<div calss="container">
   <div class="search-box">
     <div class="slogan">
       <p>با آکادمی گیک لرن برنامه نویسی رو با خیال راحت یاد بگیر و پیشرفت کن</p>
@@ -51,7 +51,7 @@ class SearchBox extends HTMLElement {
     });
     if(window.location.href !== "http://geeklearn.ir/" )
     {
-      this.shadowRoot.querySelector("#search-box").style.display = "none"
+      this.shadowRoot.querySelector(".search-box").style.display = "none"
       
     }
   }

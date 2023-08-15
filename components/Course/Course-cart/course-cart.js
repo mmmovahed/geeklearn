@@ -1,6 +1,6 @@
 let template = document.createElement("template");
 template.innerHTML = `    
-<link rel="stylesheet" href="./components/Course/course.css">
+<link rel="stylesheet" href="./components/Course/Course-cart/course-cart.css">
 <link rel="stylesheet" href="./assets/font/font-awesome/all.min.css" />
 <div class="course">
             <div>
@@ -31,7 +31,7 @@ template.innerHTML = `
             </div>
 </div>`;
 
-class Course extends HTMLElement {
+class CourseCart extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
@@ -59,4 +59,4 @@ class Course extends HTMLElement {
   }
 }
 
-export { Course };
+export { CourseCart };

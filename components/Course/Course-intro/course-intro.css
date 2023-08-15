@@ -1,0 +1,66 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "yekan";
+  --lightGreen: #6fc341;
+  --gray: #686e71;
+}
+.course-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 0;
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  /* background-color: white; */
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  border-radius: 5px;
+  border: 1px solid #dddddd;
+}
+.course-image {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-height: 500px;
+  text-align: center;
+  padding: 0.5rem;
+}
+.course-image img {
+  width: 100%;
+  height: 100%;
+  /* object-fit: ; */
+  border-radius: 7px;
+}
+.course-info .title {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 300px;
+  max-height: 300px;
+  overflow: hidden;
+  margin-top: 0rem;
+  padding: 0.5rem;
+}
+.title p {
+  text-align: justify;
+  color: #999999;
+  margin-top: 0.5rem;
+}
+.prerequisite {
+  padding: 0.5rem;
+  min-height: 100px;
+}
+.prerequisite ul {
+  list-style-type:decimal;
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 575px) {
+}
+
+@media screen and (max-width: 850px) and (min-width: 575px) {
+}

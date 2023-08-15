@@ -14,18 +14,15 @@ require_once "init.php";
 
 <body>
 
-  <div class="main">
+  <div class="container">
     <site-header></site-header>
-
-    <div class="middle">
-      <div class="courses-container">
-        <site-course course-title="آموزش جاوا اسکریپت مقدماتی" image="./assets/image/header-img.jpg" price="3000" teacher="رضا درویش" duration="12:20"></site-course>
-        <site-course course-title="آموزش جاوا اسکریپت مقدماتی" image="./assets/image/header-img.jpg" price="3000" teacher="رضا درویش" duration="12:20"></site-course>
-        <site-course course-title="آموزش جاوا اسکریپت مقدماتی" image="./assets/image/header-img.jpg" price="3000" teacher="رضا درویش" duration="12:20"></site-course>
-        <site-course course-title="آموزش جاوا اسکریپت مقدماتی" image="./assets/image/header-img.jpg" price="3000" teacher="رضا درویش" duration="12:20"></site-course>
-        <site-course course-title="آموزش جاوا اسکریپت مقدماتی" image="./assets/image/header-img.jpg" price="3000" teacher="رضا درویش" duration="12:20"></site-course>
-      </div>
+    <div class="courses-container">
+      <course-cart course-title="آموزش جاوا اسکریپت مقدماتی" image="./assets/image/header-img.jpg" price="3000" teacher="رضا درویش" duration="12:20"></course-cart>
+      <course-cart course-title="آموزش جاوا اسکریپت مقدماتی" image="./assets/image/header-img.jpg" price="3000" teacher="رضا درویش" duration="12:20"></course-cart>
+      <course-cart course-title="آموزش جاوا اسکریپت مقدماتی" image="./assets/image/header-img.jpg" price="3000" teacher="رضا درویش" duration="12:20"></course-cart>
+      <course-cart course-title="آموزش جاوا اسکریپت مقدماتی" image="./assets/image/header-img.jpg" price="3000" teacher="رضا درویش" duration="12:20"></course-cart>
     </div>
+
     <footer id="footer">
       <site-footer></site-footer>
     </footer>
@@ -34,5 +31,3 @@ require_once "init.php";
 </body>
 
 </html>
-
-

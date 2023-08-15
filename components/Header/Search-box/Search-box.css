@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: "yekan";
 }
-#search-box {
+.container {
   width: 100%;
   min-height: 580px;
   max-height: 580px;
@@ -71,7 +71,6 @@
   align-items: center;
   justify-content: center;
   margin-top: 1rem;
-
 }
 .slogan {
   width: 75%;
@@ -79,7 +78,6 @@
   align-items: center;
   justify-content: center;
   margin-top: 4rem;
-
 }
 .slogan p {
   color: #fff;
@@ -135,12 +133,14 @@
   .information {
     display: none;
   }
-  .slogan{
+  .slogan {
     margin-top: 0;
   }
-  .search-box{
+  .container {
+    display: flex;
     justify-content: center;
+    align-items: center;
+    min-height: 275px;
+    max-height: 275px;
   }
-  
-  
 }

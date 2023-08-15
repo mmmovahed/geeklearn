@@ -14,11 +14,23 @@ require_once "init.php";
 </head>
 
 <body>
-    <div class="main">
+    <div class="container">
         <site-header></site-header>
-        <section id="course-intro">
-            <course-intro></course-intro>
-        </section>
+        <quick-access-nav></quick-access-nav>
+        <div class="grid">
+            <div class="right-side">
+                <course-details></course-details>
+                <course-labels></course-labels>
+            </div>
+            <div class="left-side">
+                <course-intro></course-intro>
+                <course-video></course-video>
+                <course-comments>
+            </div>
+
+
+        </div>
+
         <footer id="footer">
             <site-footer></site-footer>
         </footer>
