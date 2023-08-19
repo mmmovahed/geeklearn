@@ -16,7 +16,6 @@ require_once "init.php";
 <body>
     <div class="container">
         <site-header></site-header>
-        <quick-access-nav></quick-access-nav>
         <div class="grid">
             <div class="right-side">
                 <course-details></course-details>
@@ -27,8 +26,6 @@ require_once "init.php";
                 <course-video></course-video>
                 <course-comments>
             </div>
-
-
         </div>
 
         <footer id="footer">

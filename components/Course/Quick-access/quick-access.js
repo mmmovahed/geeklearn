@@ -5,7 +5,7 @@ template.innerHTML = `
 <link rel="stylesheet" href="./assets/font/font-awesome/all.min.css">
 <div id="refer-box">
 <ul>
-  <li class="refer-item"><a href="">معرفی دوره</a></li>
+  <li class="refer-item"><a href="#refer-box">معرفی دوره</a></li>
   <li class="refer-item"><a href="">مشاهده دروس</a></li>
   <li class="refer-item"><a href="">نظرات</a></li>
 </ul>

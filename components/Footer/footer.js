@@ -3,7 +3,7 @@ template.innerHTML = `
 <link rel="stylesheet" href="./assets/font/font-awesome/all.min.css" />
 <link rel="stylesheet" href="./components/Footer/footer.css">
 <div>
-<h5>.کلیه حقوق برای گیک لرن محفوظ است</h5>
+<h5>کلیه حقوق برای گیک لرن محفوظ است</h5>
 </div>
 `;
 

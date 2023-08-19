@@ -2,12 +2,11 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "yekan";
   --gray: #686e71;
 }
 .container {
   width: 100%;
-  margin: 2rem 0 1rem 0;
+  margin: 2rem 0;
   box-shadow: 0 10px 15px -2px rgb(0 0 0 / 0.1),
     0 -5px 15px -4px rgb(0 0 0 / 0.1);
   border-radius: 5px;
@@ -33,6 +32,7 @@
   padding: 0.5rem;
   border-radius: 5px;
   margin: 1rem 0;
+  position: relative;
 }
 .comment-header {
   display: flex;
@@ -61,12 +61,48 @@
   cursor: pointer;
   background: linear-gradient(to right, rgb(255, 65, 108), rgb(255, 75, 43));
   transition: transform 0.2s ease-in-out;
+  font-family: 'samim';
 }
 .comment-header #reply:hover {
   transform: scale(1.05);
+}
+.comment-header #reply.deactive {
+  background: gray;
+  cursor:default;
+  transform: scale(1);
 }
 .desc-container {
   margin: 0.5rem 0;
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
+}
+.popup{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: .2rem;
+  width:70%;
+  height: 100px;
+}
+.popup textarea{
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: .2rem;
+}
+.popup button{
+  padding: .1rem .5rem;
+  margin: 0 .5rem 0 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+.popup .modal-submit{
+  background: radial-gradient(circle at 10% 20%, rgb(0, 93, 133) 0%, rgb(0, 181, 149) 90%);}
+
+.popup .modal-cancle{
+  background: linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%);
 }

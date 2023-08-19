@@ -30,7 +30,8 @@
 }
 .social-media span {
   color: var(--gray);
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
+  font-size: .8rem;
   margin-left: 0.5rem;
 }
 .quick-acc {

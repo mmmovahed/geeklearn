@@ -42,7 +42,7 @@ template.innerHTML = `
     </li>
     <li class="details-item">
       <i class="fa-solid fa-calendar-days"></i>
-      <span class="item-title">تاریخ آخرین بروزرسانی:</span>
+      <span class="item-title"> آخرین بروزرسانی:</span>
       <span class="item-value">1402/05/15</span>
     </li>
   </ul>

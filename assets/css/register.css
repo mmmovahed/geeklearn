@@ -1,17 +1,12 @@
 @font-face {
-  font-family: yekan;
-  src: url("..//font/yekan-font/Yekan.eot");
-  src: url("../font/yekan-font/yekan-regular.eot") format("Yekan-opentype"),
-    url("../font/yekan-font/yekan-regular.woff") format("woff"),
-    url("../font/yekan-font/yekan-regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'samim';
+  src: url("../font/yekan-font/Samim-FD.ttf");
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "yekan";
+  font-family: "samim";
 }
 .main {
   background-color: rgb(249, 250, 251);

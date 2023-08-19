@@ -7,11 +7,15 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'samim';
+  src: url(../font/yekan-font/Samim-FD.ttf);
+}
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: "yekan";
+  font-family: "samim";
   direction: rtl;
 }
 body {
