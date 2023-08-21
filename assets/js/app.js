@@ -12,6 +12,7 @@ import { CourseDetails } from "../../components/Course/Course-details/course-det
 import { CourseLabels } from "../../components/Course/Course-labels/course-labels.js";
 import { CourseComments } from "../../components/Course/Comments/comments.js";
 import { Label } from "../../components/Course/Course-labels/Label/label.js";
+import { VideoItem } from "../../components/Course/Course-video/Video-item/video-item.js";
 
 
 
@@ -29,5 +30,6 @@ window.customElements.define("course-details", CourseDetails);
 window.customElements.define("course-labels", CourseLabels);
 window.customElements.define("course-comments", CourseComments);
 window.customElements.define("label-element",Label);
+window.customElements.define("video-item",VideoItem)
 
 

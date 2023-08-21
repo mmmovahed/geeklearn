@@ -1,0 +1,31 @@
+.count{
+    position: absolute;
+    background-color: #fff;
+    top: 13px;
+    right: -15px;
+    border: 2px solid rgb(180, 180, 180);
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 100%;
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+  .title{
+    font-size: 1rem;
+    border-left: 1px solid #ffdfdf;
+    padding-left: .7rem;
+  }
+  .duration{
+    border-left: 1px solid #ffdfdf;
+    padding-left: .7rem;
+    color: var(--gray);
+  }
+  li{
+    border: 1px dashed  rgb(209, 206, 206);
+    padding: 1rem 2rem;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }

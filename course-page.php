@@ -27,7 +27,9 @@ require_once "init.php";
             <div class="left-side">
                 <course-intro img="./assets/image/course-img/js-course-img.jpg" title="آموزش جاوا اسکریپت -مقدماتی" requirements="1-HTML" description="‌کتابخانه‌ها باعث افزایش سرعت کدنویسی میشن. در حدی که تو بازار کار هم از کتابخانه های مختلفی برای توسعه پروژه‌ها استفاده میشه. تو این دوره 20 کتابخانه پرکاربرد و پراستفاده ری‌اکت که تو بازار کار برای توسعه پروژه های مختلفی استفاده میشه رو بصورت پروژه محور یاد میگیری. این موضوع هم سرعت کدنویسی شما رو افزایش میده، هم دستتون تو کدنویسی بازتره و هم شانس استخدامیتون رو بالا می‌بر">
                 </course-intro>
-                <course-video></course-video>
+                <course-video duration="12:30:00" thumbnail="">
+                    <video-item slot="item" number="1" title="شروع دوره" duration="12:50"></video-item>
+                </course-video>
                 <course-comments>
             </div>
         </div>

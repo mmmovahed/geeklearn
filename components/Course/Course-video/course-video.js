@@ -10,7 +10,7 @@ template.innerHTML = `
     </div>
     <div class="left">
      <span>مدت زمان دوره</span>
-     <span class="course-duration">12:20</span> 
+     <span class="course-duration"></span> 
     </div>
   </div>
   <div class="video-player-contaienr">
@@ -82,11 +82,11 @@ template.innerHTML = `
   </div>
   <div class="video-list-container">
    <ul>
-   <li><span class="count">1</span><span class="title">معرفی دوره</span> <span class="duration">04:10</span></li>
-   <li><span class="count">2</span><span class="title">معرفی دوره</span> <span class="duration">04:10</span></li>
+   <slot name="item"/>
    </ul>
   </div>
 </div>
+<script type="module" src="./assets/js/app.js" defer></script>
 `;
 
 class CourseVideo extends HTMLElement {
@@ -105,7 +105,9 @@ class CourseVideo extends HTMLElement {
     const totalTimeElem = this.shadowRoot.querySelector(".total-time");
     const currentTimeElem = this.shadowRoot.querySelector(".current-time");
     const speedBtn = this.shadowRoot.querySelector(".speed-btn");
-    const timelineContainer = this.shadowRoot.querySelector(".timeline-container");
+    const timelineContainer = this.shadowRoot.querySelector(
+      ".timeline-container"
+    );
     document.addEventListener("keydown", (e) => {
       if (e.keyCode == 32 && e.target == document.body) {
         e.preventDefault();
@@ -306,13 +308,15 @@ class CourseVideo extends HTMLElement {
     }
   }
   connectedCallback() {
-   
-    
+    this.shadowRoot.querySelector(".course-duration").innerHTML =
+      this.getAttribute("duration");
+    this.shadowRoot
+      .querySelector("video")
+      .setAttribute("poster", this.getAttribute("thumbnail"));
   }
   static observedAttributes() {
-    return ["img","title","description","requirements"];
+    return ["duration", "thumbnail"];
   }
-
 }
 
 export { CourseVideo };
