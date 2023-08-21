@@ -11,6 +11,7 @@ import { QuickAccess } from "../../components/Course/Quick-access/quick-access.j
 import { CourseDetails } from "../../components/Course/Course-details/course-details.js";
 import { CourseLabels } from "../../components/Course/Course-labels/course-labels.js";
 import { CourseComments } from "../../components/Course/Comments/comments.js";
+import { Label } from "../../components/Course/Course-labels/Label/label.js";
 
 
 
@@ -27,5 +28,6 @@ window.customElements.define("quick-access-nav", QuickAccess);
 window.customElements.define("course-details", CourseDetails);
 window.customElements.define("course-labels", CourseLabels);
 window.customElements.define("course-comments", CourseComments);
+window.customElements.define("label-element",Label);
 
 

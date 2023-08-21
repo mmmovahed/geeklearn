@@ -1,0 +1,11 @@
+.label {
+  text-decoration: none;
+  background-color: #f1f5f8;
+  color: black;
+  padding: 0 1rem;
+  font-size: 0.8rem;
+  transition: background-color 0.3s ease-in-out;
+}
+.label:hover {
+  background-color: #e0e0e0;
+}

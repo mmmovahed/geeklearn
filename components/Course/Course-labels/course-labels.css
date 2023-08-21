@@ -35,14 +35,3 @@
   gap: 0.7rem 0.5rem;
   margin: 1rem 0;
 }
-.labels-container .label {
-  text-decoration: none;
-  background-color: #f1f5f8;
-  color: black;
-  padding: 0 1rem;
-  font-size: 0.8rem;
-  transition: background-color 0.3s ease-in-out;
-}
-.labels-container .label:hover {
-  background-color: #e0e0e0;
-}

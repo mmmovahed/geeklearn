@@ -9,11 +9,10 @@ template.innerHTML = `
   <span>برچسب ها :</span>
 </div>
 <div class="labels-container">
-  <a class="label" href="#">آموزش فلاتر</a>
-  <a class="label" href="#">آموزش فلاتر</a>
-  <a class="label" href="#">آموزش فلاتر</a>
+<slot name="label"/>
 </div>
 </div>
+<script type="module" src="./assets/js/app.js" defer></script>
 `;
 
 class CourseLabels extends HTMLElement {

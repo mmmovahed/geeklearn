@@ -4,7 +4,7 @@ template.innerHTML = `
 <link rel="stylesheet" href="./assets/font/font-awesome/all.min.css" />
 <div class="course">
             <div>
-              <a href="./course-page.php">
+              <a href="" class="link">
                 <img
                   src=""
                   alt=""
@@ -36,6 +36,7 @@ class CourseCart extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
     this.shadowRoot.appendChild(template.content.cloneNode(true));
+    const img = this.shadowRoot.querySelector(".img-course");
   }
 
   connectedCallback() {
@@ -46,16 +47,28 @@ class CourseCart extends HTMLElement {
     this.shadowRoot.querySelector(".course-title").innerHTML =
       this.getAttribute("course-title");
     this.shadowRoot
+      .querySelector(".course-title")
+      .setAttribute("href", this.getAttribute("courseId"));
+    this.shadowRoot
       .querySelector(".img-course")
       .setAttribute("src", this.getAttribute("image"));
-      
-      this.shadowRoot.querySelector("#course-duration").innerHTML =
+    this.shadowRoot
+      .querySelector(".link")
+      .setAttribute("href", this.getAttribute("courseId"));
+
+    this.shadowRoot.querySelector("#course-duration").innerHTML =
       this.getAttribute("duration");
   }
-  
 
   static observedAttributes() {
-    return ["course-title", "image", "price", "teacher","duration"];
+    return [
+      "course-title",
+      "image",
+      "price",
+      "teacher",
+      "duration",
+      "courseId",
+    ];
   }
 }
 

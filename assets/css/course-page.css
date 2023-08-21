@@ -48,7 +48,7 @@ body {
   .grid{
     grid-template-columns: 100%;
     gap: 1rem;
-    padding:.4rem;
+    padding:.2rem;
   }
 }
 @media screen and (max-width: 850px) and (min-width: 575px) {

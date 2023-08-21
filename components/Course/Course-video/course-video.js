@@ -74,7 +74,7 @@ template.innerHTML = `
 
         </div>
       </div>
-      <video id="intro">
+      <video id="intro" poster="">
         <source type="video/mp4" src="../components/Course/Course-video/ab.mp4">
         </source>
       </video>
@@ -83,7 +83,7 @@ template.innerHTML = `
   <div class="video-list-container">
    <ul>
    <li><span class="count">1</span><span class="title">معرفی دوره</span> <span class="duration">04:10</span></li>
-   <li><span class="count">1</span><span class="title">معرفی دوره</span> <span class="duration">04:10</span></li>
+   <li><span class="count">2</span><span class="title">معرفی دوره</span> <span class="duration">04:10</span></li>
    </ul>
   </div>
 </div>
@@ -305,6 +305,14 @@ class CourseVideo extends HTMLElement {
       video.paused ? video.play() : video.pause();
     }
   }
+  connectedCallback() {
+   
+    
+  }
+  static observedAttributes() {
+    return ["img","title","description","requirements"];
+  }
+
 }
 
 export { CourseVideo };
