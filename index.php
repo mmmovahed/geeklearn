@@ -21,7 +21,7 @@ require_once "init.php";
         $result = $main->showTheLatestCourses();
         if ($result->num_rows > 0)
             while($row = $result->fetch_assoc()) {
-                echo "<course-cart courseId='./course-page.php?id=$row[id]' course-title='".$row["title"]."' image=$row[thumbnail] price=$row[cost] teacher='".$row["teacher_name"]."' duration=$row[time] teacher_id=".$row["teacher_id"]."></course-cart>";
+                echo "<course-cart courseId='./course-page.php?id=$row[id]' course-title='".$row["title"]."' image=$row[thumbnail] price=".$row['cost']." teacher='".$row["teacher_name"]."' duration=$row[time] teacherId='./teacher-page.php?id=".$row["teacher_id"]."' ></course-cart>";
             }
 
         ?>

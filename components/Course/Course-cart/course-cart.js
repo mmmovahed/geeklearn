@@ -40,10 +40,11 @@ class CourseCart extends HTMLElement {
   }
 
   connectedCallback() {
-    this.shadowRoot.querySelector("#price").innerHTML =
-      this.getAttribute("price");
     this.shadowRoot.querySelector(".course-teacher").innerHTML =
       this.getAttribute("teacher");
+    this.shadowRoot
+      .querySelector(".course-teacher")
+      .setAttribute("href", this.getAttribute("teacherId"));
     this.shadowRoot.querySelector(".course-title").innerHTML =
       this.getAttribute("course-title");
     this.shadowRoot
@@ -58,6 +59,11 @@ class CourseCart extends HTMLElement {
 
     this.shadowRoot.querySelector("#course-duration").innerHTML =
       this.getAttribute("duration");
+    let x = Number(this.getAttribute("price"));
+    x = x.toLocaleString("en-US");
+    this.setAttribute("price", x);
+    this.shadowRoot.querySelector("#price").innerHTML =
+      this.getAttribute("price");
   }
 
   static observedAttributes() {
@@ -68,6 +74,7 @@ class CourseCart extends HTMLElement {
       "teacher",
       "duration",
       "courseId",
+      "teacherId",
     ];
   }
 }
