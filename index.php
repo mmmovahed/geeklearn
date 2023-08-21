@@ -17,10 +17,15 @@ require_once "init.php";
   <div class="container">
     <site-header></site-header>
     <div class="courses-container">
-      <course-cart courseId="./course-page.php?id=1" course-title="آموزش جاوا اسکریپت مقدماتی" image="./assets/image/header-img.jpg" price="3000" teacher="رضا درویش" duration="12:20"></course-cart>
-      <course-cart courseId="./course-page.php?id=2" course-title="آموزش جاوا اسکریپت مقدماتی" image="./assets/image/header-img.jpg" price="3000" teacher="رضا درویش" duration="12:20"></course-cart>
-      <course-cart courseId="./course-page.php?id=3" course-title="آموزش جاوا اسکریپت مقدماتی" image="./assets/image/header-img.jpg" price="3000" teacher="رضا درویش" duration="12:20"></course-cart>
-      <course-cart courseId="./course-page.php?id=4" course-title="آموزش جاوا اسکریپت مقدماتی" image="./assets/image/header-img.jpg" price="2000" teacher="رضا درویش" duration="12:20"></course-cart>
+        <?php
+        $result = $main->showTheLatestCourses();
+        if ($result->num_rows > 0)
+            while($row = $result->fetch_assoc()) {
+                echo "<course-cart courseId='./course-page.php?id=$row[id]' course-title='".$row["title"]."' image=$row[thumbnail] price=$row[cost] teacher='".$row["teacher_name"]."' duration=$row[time] teacher_id=".$row["teacher_id"]."></course-cart>";
+            }
+
+        ?>
+
     </div>
 
     <footer id="footer">

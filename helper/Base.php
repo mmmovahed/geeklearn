@@ -8,7 +8,7 @@ abstract class Base
         $this->dblink=mysqli_connect(DB_HOST,DB_USERNAME,DB_PASSWORD) or die;
         mysqli_select_db($this->dblink,DB_NAME) or die;
     }
-    public function query($q)
+    public function queryy($q)
     {
         $result=mysqli_query($this->dblink,$q);
         if(stristr($q,'INSERT'))
@@ -31,6 +31,7 @@ abstract class Base
         $result = mysqli_query($this->dblink,$q);
         return $result;
     }
+
     public function post($key)
     {
         if (isset($_POST[$key]))
@@ -67,6 +68,21 @@ abstract class Base
         return $date;
     }
 
+    public function showTheLatestCourses()
+    {
+        $query="
+        SELECT tbl_courses.id, tbl_courses.title, tbl_courses.thumbnail, tbl_courses.time, tbl_courses.cost, tbl_courses.discount,
+               (tbl_courses.cost-(tbl_courses.cost*tbl_courses.discount)) cost_with_discount, CONCAT(tbl_teachers.name,' ',
+                tbl_teachers.family) teacher_name, tbl_teachers.id teacher_id
+        FROM tbl_courses
+        INNER JOIN tbl_teachers ON tbl_courses.teacher_id = tbl_teachers.id
+        WHERE tbl_courses.status >= 1
+        ORDER BY created_at
+        LIMIT 10
+        ";
+        $result = $this->selectData($query);
+        return $result;
+    }
 
     public function __destruct()
     {

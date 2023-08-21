@@ -39,6 +39,5 @@ class Frontend extends base
         {
             $this->redirect("/login&register/register.php?register_status=failed");
         }
-
     }
 }

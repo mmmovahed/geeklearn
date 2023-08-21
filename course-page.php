@@ -1,5 +1,6 @@
 <?php
 require_once "init.php";
+# $x=(isset($_GET["id"]) AND !empty($_GET["id"])) ? ("HI"):($main->redirect("index.php"));
 ?>
 <!DOCTYPE html>
 <html lang="en">
