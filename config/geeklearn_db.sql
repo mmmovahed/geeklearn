@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 15, 2023 at 05:30 AM
+-- Generation Time: Aug 21, 2023 at 10:20 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -20,23 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `geeklearn_db`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tbl-teachers`
---
-
-CREATE TABLE `tbl-teachers` (
-  `id` int(11) NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `family` varchar(100) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `telegram-id` varchar(25) NOT NULL,
-  `picture` text NOT NULL,
-  `description` text NOT NULL,
-  `status` tinyint(4) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -158,19 +141,25 @@ CREATE TABLE `tbl_courses` (
   `title` varchar(200) NOT NULL,
   `description` longtext NOT NULL,
   `thumbnail` text NOT NULL,
-  `intro-vid-id` int(11) NOT NULL,
-  `teacher-id` int(11) NOT NULL,
+  `teacher_id` int(11) NOT NULL,
   `advantages` text NOT NULL,
-  `category-id` int(11) NOT NULL,
-  `created-at` varchar(20) NOT NULL,
-  `last-update` varchar(20) NOT NULL,
+  `category_id` int(11) NOT NULL,
+  `created_at` varchar(20) NOT NULL,
+  `last_update` varchar(20) NOT NULL,
   `cost` int(8) NOT NULL,
   `discount` tinyint(4) NOT NULL,
-  `in-advance` text NOT NULL,
+  `in_advance` text NOT NULL,
   `time` tinyint(4) NOT NULL,
   `level` varchar(20) NOT NULL,
   `status` tinyint(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+
+--
+-- Dumping data for table `tbl_courses`
+--
+
+INSERT INTO `tbl_courses` (`id`, `title`, `description`, `thumbnail`, `teacher_id`, `advantages`, `category_id`, `created_at`, `last_update`, `cost`, `discount`, `in_advance`, `time`, `level`, `status`) VALUES
+(2, 'آموزش مدلسازی پایه و ماشین لرنینگ با پایتون\r\n', 'آموزش مدلسازی پایه و ماشین لرنینگ با پایتون\r\nسلام دوستان \r\nدوره آموزش مدل سازی پایه و ماشین لرنینگ، یک دوره آموزشی جامع است که به شما کمک می کند تا با اصول و روش های مدل سازی پایه و مفاهیم اساسی ماشین لرنینگ آشنا شوید. در این دوره، شما با الگوریتم های مختلف مانند رگرسیون خطی، رگرسیون لجستیک، درخت تصمیم و الگوریتم های ذکر شده در سرفصل ها آشنا می‌شود.\r\n\r\n با پایان این دوره، شما قادر خواهید بود تا به صورت حرفه ای و با استفاده از الگوریتم های مناسب، مسائل پیچیده را حل کنید.\r\n\r\n \r\n\r\n توجه کنید که سرفصل های ذکر شده کلی میباشید در هر قسمت و هر سرفصل ما پروژه عملی و کاربردی و تکنیک های کد زنی داریم.\r\n\r\n \r\n\r\nسرفصل های دوره : \r\n\r\nفصل اول ) پیش پردازش داده‌ها\r\n ۱.۱) مباحث تکمیلی pandas و numpy\r\n۱.۲) آشنایی با کتابخانه‌های مرتبط(scikit-learn)\r\n۱.۳) پردازش داده\r\n۱.۴) ارتباط داده همبستگی میان آن‌ها\r\nفصل دوم) الگوریتم های طبقه بندی و رگرسیون\r\n۲.۰) آشنایی و مقدمات طبقه بندی\r\n۲.۱) معرفی الگوریتم svm و استفاده از آن\r\n۲.۲) آموزش معیار های مختلف ارزیابی\r\n۲.۳) معرفی و الگوریتم nkn و استفاده از آن\r\n۲.۴) الگوریتم درخت تصمیم\r\n۲.۵) مفاهیم ریاضی در طبقه بندی ( variance, bias , …)\r\n۲.۶) الگوریتم random forest\r\n۲.۷) الگوریتم AdaBoost\r\n۲.۸) fine tune کردن الگوریتم ها با نگاه دقیق به پارامتر هایش\r\n۲.۹) پردازش متن و زبان طبیغی NLP\r\n۲.۱۰) آشنایی و مقدمات رگرسیون\r\n۲.۱۱ ) الگوریتم های XG boost\r\n۲.۱۲) الگوریتم cat boost\r\n۲.۱۳) خلاصه فصل و جمع بندی\r\nفصل سوم) الگوریتم های خوشه بندی\r\n۳.۱) آشنایی با clustering\r\n۳.۲) الگوریتم Kmeans\r\n۳.۲) اگوریتم DBSCAN\r\n۳.۳) تکنیک RFM\r\n۳.۴)بررسی ریاضیات الگوریتمها و روش کار آن‌ها\r\n۳.۵)متن کاوی و خوشه بندی در متن\r\n۳.۵) Outer detection تشخیص داده‌های نویز\r\n۳.۵) خلاصه فصل و جمع بندی\r\nفصل چهارم) تکنیک های ماشین لرنینگ\r\n۴.۱)کاهش اابعاد\r\n۴.۲)الگوریتم PCA و KERNEL PCA برای کاهش ابعاد\r\n۴.۴) الگوریتم Factor Analysis\r\n۴.۵) الگوریتم های پیشرفته‌تر\r\n۴.۶) داده‌های غیر متوازن و کارکردن با آن‌ها\r\nفصل پنچم) مباحث تکمیلی\r\n۵.۱) طبقه بندی تصویر\r\n۵.۲) طبقه بندی سری های زمانی\r\n۵.۳ الگوریتم های پیشرفته‌تر\r\n', 'https://toplearn.com/img/course/%D8%A2%D9%85%D9%88%D8%B2%D8%B4_%D9%85%D8%AF%D9%84%D8%B3%D8%A7%D8%B2%DB%8C_%D9%BE%D8%A7%DB%8C%D9%87_%D9%88_%D9%85%D8%A7%D8%B4%DB%8C%D9%86_%D9%84%D8%B1%D9%86%DB%8C%D9%86%DA%AF_%D8%A8%D8%A7_%D9%BE%D8%A7%DB%8C%D8%AA%D9%88%D9%86.jpg', 1, ' مباحث تکمیلی pandas و numpy.\r\nfine tune کردن الگوریتم ها با نگاه دقیق به پارامتر هایش.', 1, '10:24', '', 200000, 0, '.زبان برنامه نویسی پایتون\r\n.دوره مبانی و مقدمات هوش مصنوعی', 127, '3', 1);
 
 -- --------------------------------------------------------
 
@@ -199,6 +188,13 @@ CREATE TABLE `tbl_courses_categories` (
   `name` varchar(100) NOT NULL,
   `thumbnail` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+
+--
+-- Dumping data for table `tbl_courses_categories`
+--
+
+INSERT INTO `tbl_courses_categories` (`id`, `name`, `thumbnail`) VALUES
+(1, 'هوش مصنوعی', NULL);
 
 -- --------------------------------------------------------
 
@@ -427,6 +423,30 @@ CREATE TABLE `tbl_statistics` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_teachers`
+--
+
+CREATE TABLE `tbl_teachers` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `family` varchar(100) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `telegram-id` varchar(25) NOT NULL,
+  `picture` text NOT NULL,
+  `description` text NOT NULL,
+  `status` tinyint(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+
+--
+-- Dumping data for table `tbl_teachers`
+--
+
+INSERT INTO `tbl_teachers` (`id`, `name`, `family`, `email`, `telegram-id`, `picture`, `description`, `status`) VALUES
+(1, ' امیرحسین ', 'ساوه دربندسری', 'save@gmail.com', 'save_amirhossein', 'https://toplearn.com/img/user/250x259/5842b2a5-fc7b-4dd0-b4f3-b0815af9422b_amirhossein_darbandsary.jpeg', 'سلام من امیرحسین دربندسری مدرس و برنامه نویس هوش مصنوعی هستم خیلی خوشحالم که میتونم در راه هوش مصنوعی کمکی به شما باشم.\r\nرزومه من رو میتونین از طریق لینک زیر مشاهده کنید.\r\n\r\nhttps://www.linkedin.com/in/amirhossein-darbandsari-505803207/', 1);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_tickets`
 --
 
@@ -518,12 +538,6 @@ CREATE TABLE `tbl_wallet_datails` (
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `tbl-teachers`
---
-ALTER TABLE `tbl-teachers`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `tbl_blogs`
@@ -670,6 +684,12 @@ ALTER TABLE `tbl_statistics`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tbl_teachers`
+--
+ALTER TABLE `tbl_teachers`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tbl_tickets`
 --
 ALTER TABLE `tbl_tickets`
@@ -703,12 +723,6 @@ ALTER TABLE `tbl_wallet_datails`
 --
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `tbl-teachers`
---
-ALTER TABLE `tbl-teachers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_blogs`
@@ -756,7 +770,7 @@ ALTER TABLE `tbl_carts`
 -- AUTO_INCREMENT for table `tbl_courses`
 --
 ALTER TABLE `tbl_courses`
-  MODIFY `id` int(7) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tbl_courses_booklets`
@@ -768,7 +782,7 @@ ALTER TABLE `tbl_courses_booklets`
 -- AUTO_INCREMENT for table `tbl_courses_categories`
 --
 ALTER TABLE `tbl_courses_categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tbl_courses_comments`
@@ -853,6 +867,12 @@ ALTER TABLE `tbl_questions_details`
 --
 ALTER TABLE `tbl_statistics`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tbl_teachers`
+--
+ALTER TABLE `tbl_teachers`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tbl_tickets`
