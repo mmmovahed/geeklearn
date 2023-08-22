@@ -89,4 +89,22 @@ abstract class Base
         if ($this->dblink)
             mysqli_close($this->dblink);
     }
+
+    public function ascertainStatus($status)
+    {
+        if ($status == 0)
+            return "در انتظار تایید";
+        elseif ($status == 1)
+            return "فعال";
+        elseif ($status == 2)
+            return "رد صلاحیت";
+        elseif ($status == 3)
+            return "غیر فعال";
+        elseif ($status == 4)
+            return "در حال برگذاری";
+        elseif ($status == 5)
+            return "تکمیل شده";
+        elseif ($status == 5)
+            return "لغو شده";
+    }
 }

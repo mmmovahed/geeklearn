@@ -40,4 +40,21 @@ class Frontend extends base
             $this->redirect("/login&register/register.php?register_status=failed");
         }
     }
+
+    public function coursePageInformations($id)
+    {
+        $query="
+        SELECT tbl_courses.id, tbl_courses.title, tbl_courses.description,tbl_courses.advantages , tbl_courses.created_at,
+               tbl_courses.last_update, tbl_courses.in_advance,  tbl_courses.thumbnail, tbl_courses.time, tbl_courses.level,
+               tbl_courses.status,  tbl_courses.cost, tbl_courses.discount,
+               (tbl_courses.cost-(tbl_courses.cost*tbl_courses.discount)) cost_with_discount,
+               CONCAT(tbl_teachers.name,' ',tbl_teachers.family) teacher_name, tbl_teachers.id teacher_id, tbl_labels.name
+       FROM tbl_courses
+        INNER JOIN tbl_teachers ON tbl_courses.teacher_id = tbl_teachers.id
+        INNER JOIN tbl_labels ON tbl_courses.id = tbl_labels.course_id
+        WHERE tbl_courses.status >= 1 AND tbl_courses.id=".$id
+        ;
+        $result = $this->selectData($query);
+        return $result;
+    }
 }
