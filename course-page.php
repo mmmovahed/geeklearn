@@ -42,21 +42,19 @@ require_once "init.php";
                     $cost_with_discount=$row["cost_with_discount"];
                     $teacher_name=$row["teacher_name"];
                     $teacher_id=$row["teacher_id"];
+                    $time=$row["time"];
                     $status=$main->ascertainStatus($row["status"]);
+                    $episode=$row["episode"];
                 }
-                $sql1="SELECT COUNT(episode) episode, SUM(time) time FROM tbl_courses_videos WHERE course_id=".$id;
-                $result1 = $main->selectData($sql1);
-                if ($result1->num_rows > 0){
-                    $row1 = $result1->fetch_assoc();
-                    $time=$row1["time"];
-                    $episode=$row1["episode"];
-                }
+                if ($cost==0 or $cost == null)
+                    $cost="رایگانــ";
                 ?>
-                <course-details price=<?php echo $cost?> teacher="<?php echo "$teacher_name"?>" numVideo=<?php echo $episode?> duration='<?php echo $time;?>' level=<?php echo $level?> status=<?php echo $status?> lastUpdate=<?php echo $last_update?>></course-details>
+                <course-details price=<?php echo $cost?> teacher="<?php echo "$teacher_name"?>" numVideo=<?php echo $episode?> duration='<?php echo $time;?>' level='<?php echo $level?>' status='<?php echo $status?>' lastUpdate=<?php echo $last_update?>></course-details>
                 <course-labels>
                     <?php
                     while($row = $result->fetch_assoc())
-                       echo "<label-element slot='label' title= '".$row["name"]."'></label-element>";
+                       echo "<label-element slot='label' title= '".$row["name"][1]."'></label-element>";
+                       echo "<label-element slot='label' title= ''></label-element>";
                     ?>
                 </course-labels>
 
@@ -66,6 +64,7 @@ require_once "init.php";
                 </course-intro>
                 <course-video duration='<?php echo $time;?>' thumbnail="<?php echo $thumbnail;?>">
                     <video-item slot="item" number="1" title="شروع دوره" duration="12:50"></video-item>
+
                 </course-video>
                 <course-comments>
             </div>
