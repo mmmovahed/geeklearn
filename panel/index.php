@@ -1,4 +1,4 @@
 <?php
 require_once "../init.php";
-$main->updateCountOfTheEpisodesOfTheCourses();
+// $main->updateCountOfTheEpisodesOfTheCourses();
 $main->updateTimeOfTheCourses();
