@@ -46,7 +46,7 @@ class Frontend extends base
         $query="
         SELECT tbl_courses.id, tbl_courses.title, tbl_courses.description,tbl_courses.advantages , tbl_courses.created_at,
                tbl_courses.last_update, tbl_courses.in_advance,  tbl_courses.thumbnail, tbl_courses.time, tbl_courses.level,
-               tbl_courses.status,  tbl_courses.cost, tbl_courses.discount,
+               tbl_courses.status,  tbl_courses.cost, tbl_courses.discount, tbl_courses.episode, 
                (tbl_courses.cost-(tbl_courses.cost*tbl_courses.discount)) cost_with_discount,
                CONCAT(tbl_teachers.name,' ',tbl_teachers.family) teacher_name, tbl_teachers.id teacher_id, tbl_labels.name
        FROM tbl_courses

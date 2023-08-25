@@ -32,7 +32,7 @@ require_once "init.php";
                     $in_advance1="";
                     for ($i=1;$i< count($in_advance);$i++)
                     {
-                        $in_advance1 .= ($i)." -".$in_advance[$i]."<br>";
+                        $in_advance1 .= ($i)."- ".$in_advance[$i]."<br>";
                     }
                     $thumbnail=$row["thumbnail"];
                     $time=$row["time"];
@@ -49,12 +49,12 @@ require_once "init.php";
                 if ($cost==0 or $cost == null)
                     $cost="رایگانــ";
                 ?>
-                <course-details price=<?php echo $cost?> teacher="<?php echo "$teacher_name"?>" numVideo=<?php echo $episode?> duration='<?php echo $time;?>' level='<?php echo $level?>' status='<?php echo $status?>' lastUpdate=<?php echo $last_update?>></course-details>
+                <course-details price=<?php echo $cost?> teacher="<?php echo $teacher_name?>" numVideo=<?php echo $episode?> duration='<?php echo $time;?>' level='<?php echo $level?>' status='<?php echo $status?>' lastUpdate='<?php echo $last_update?>'></course-details>
                 <course-labels>
                     <?php
-                    while($row = $result->fetch_assoc())
-                       echo "<label-element slot='label' title= '".$row["name"][1]."'></label-element>";
-                       echo "<label-element slot='label' title= ''></label-element>";
+                    while($row = $result->fetch_assoc()){
+                        echo "<label-element slot='label' title= '".$row["name"]."'></label-element>";
+                    }
                     ?>
                 </course-labels>
 
@@ -63,8 +63,21 @@ require_once "init.php";
                 <course-intro img=<?php echo $thumbnail?> title="<?php echo $title?>" requirements="<?php echo $in_advance1?>" description="<?php echo $description?>">
                 </course-intro>
                 <course-video duration='<?php echo $time;?>' thumbnail="<?php echo $thumbnail;?>">
-                    <video-item slot="item" number="1" title="شروع دوره" duration="12:50"></video-item>
-
+                    <?php
+                    $sql="SELECT * FROM tbl_courses_videos WHERE course_id=".$id;
+                    $result=$main->selectData($sql);
+                    $i=0;
+                    if ($result->num_rows>0)
+                        while($row=$result->fetch_assoc()){
+                            $i++;
+                            if ($row["title"]==null)
+                                $row["title"]="قسمت ".$i."، ".$title;
+                            if ($row["time"]<10)
+                                $row["time"]="0".$row["time"];
+                            $row["time"]=$row["time"].":00";
+                            echo "<video-item slot='item' number=$i title='".$row["title"]."' duration='$row[time]'></video-item>";
+                    }
+                    ?>
                 </course-video>
                 <course-comments>
             </div>
