@@ -64,7 +64,7 @@
   width: 100%;
 }
 .video-container.theater {
-  max-height: 80vh;
+  max-height: 65vh;
 }
 .video-container.full-screen {
   max-height: 100vh;

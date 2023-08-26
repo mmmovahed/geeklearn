@@ -22,6 +22,9 @@ require_once "init.php";
                 <course-details price="200,000" teacher="ایمان مدائنی" numVideo=50 duration="12:30:00" level="Elementry" status="درحال برگزاری" lastUpdate="1402/01/02"></course-details>
                 <course-labels>
                     <label-element slot="label" title="آموزش فلاتر"></label-element>
+                    <label-element slot="label" title="آموزش فلاتر"></label-element>
+                    <label-element slot="label" title="آموزش فلاتر"></label-element>
+                   
                 </course-labels>
 
             </div>

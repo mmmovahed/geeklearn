@@ -65,7 +65,7 @@ class CourseCart extends HTMLElement {
     this.shadowRoot.querySelector("#price").innerHTML =
       this.getAttribute("price");
   }
-
+    
   static observedAttributes() {
     return [
       "course-title",
