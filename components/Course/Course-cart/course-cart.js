@@ -3,32 +3,28 @@ template.innerHTML = `
 <link rel="stylesheet" href="./components/Course/Course-cart/course-cart.css">
 <link rel="stylesheet" href="./assets/font/font-awesome/all.min.css" />
 <div class="course">
-            <div>
-              <a href="" class="link">
-                <img
-                  src=""
-                  alt=""
-                  class="img-course"
-                />
-              </a>
-            </div>
-            <div class="info">
-            <a href="./course-page.php" class="course-title"></a>
-            <div class="teacher-container">
-            <i class="fa-solid fa-user"></i>
-            <a href="./course-page.php" class="course-teacher"></a>
-            </div>
-            <div class="details">
-                <div class="duration-container">
-                <i class="fa-regular fa-clock"></i>
-                <span id="course-duration"></span>
-                </div>
-                  <div class="price-container">
-                    <span id="price"></span>
-                    <span >تومان</span>
-                  </div>
-              </div>
-            </div>
+  <div class="image-course-wrapper">
+    <a href="" class="link">
+      <img src="" alt="" class="img-course" />
+    </a>
+  </div>
+  <div class="info">
+    <a href="./course-page.php" class="course-title"></a>
+    <div class="teacher-container">
+      <i class="fa-solid fa-user"></i>
+      <a href="./course-page.php" class="course-teacher"></a>
+    </div>
+    <div class="details">
+      <div class="duration-container">
+        <i class="fa-regular fa-clock"></i>
+        <span id="course-duration"></span>
+      </div>
+      <div class="price-container">
+        <span id="price"></span>
+        <span>تومان</span>
+      </div>
+    </div>
+  </div>
 </div>`;
 
 class CourseCart extends HTMLElement {
@@ -45,8 +41,16 @@ class CourseCart extends HTMLElement {
     this.shadowRoot
       .querySelector(".course-teacher")
       .setAttribute("href", this.getAttribute("teacherId"));
-    this.shadowRoot.querySelector(".course-title").innerHTML =
-      this.getAttribute("course-title");
+    if (this.getAttribute("course-title").length > 39) {
+      const x = this.getAttribute("course-title").slice(0, 32);
+
+      this.shadowRoot.querySelector(".course-title").innerHTML =
+        x.concat("...");
+    } else {
+      this.shadowRoot.querySelector(".course-title").innerHTML =
+        this.getAttribute("course-title");
+    }
+
     this.shadowRoot
       .querySelector(".course-title")
       .setAttribute("href", this.getAttribute("courseId"));
@@ -65,7 +69,7 @@ class CourseCart extends HTMLElement {
     this.shadowRoot.querySelector("#price").innerHTML =
       this.getAttribute("price");
   }
-    
+
   static observedAttributes() {
     return [
       "course-title",

@@ -8,7 +8,7 @@ abstract class Base
         $this->dblink=mysqli_connect(DB_HOST,DB_USERNAME,DB_PASSWORD) or die;
         mysqli_select_db($this->dblink,DB_NAME) or die;
     }
-    public function queryy($q)
+    public function query($q)
     {
         $result=mysqli_query($this->dblink,$q);
         if(stristr($q,'INSERT'))
@@ -71,7 +71,7 @@ abstract class Base
     public function showTheLatestCourses()
     {
         $query="
-        SELECT tbl_courses.id, tbl_courses.title, tbl_courses.thumbnail, tbl_courses.time, tbl_courses.cost, tbl_courses.discount,
+        SELECT tbl_courses.id, tbl_courses.title, tbl_courses.thumbnail,tbl_courses.time, tbl_courses.cost, tbl_courses.discount,
                (tbl_courses.cost-(tbl_courses.cost*tbl_courses.discount)) cost_with_discount, CONCAT(tbl_teachers.name,' ',
                 tbl_teachers.family) teacher_name, tbl_teachers.id teacher_id
         FROM tbl_courses
@@ -88,5 +88,25 @@ abstract class Base
     {
         if ($this->dblink)
             mysqli_close($this->dblink);
+    }
+
+    public function ascertainStatus($status)
+    {
+        if ($status == 0)
+            return "در انتظار تایید";
+        elseif ($status == 1)
+            return "فعال";
+        elseif ($status == 2)
+            return "رد صلاحیت";
+        elseif ($status == 3)
+            return "غیر فعال";
+        elseif ($status == 4)
+            return "در حال برگذاری";
+        elseif ($status == 5)
+            return "تکمیل شده";
+        elseif ($status == 5)
+            return "لغو شده";
+        elseif ($status == 5)
+            return "به زودی";
     }
 }
