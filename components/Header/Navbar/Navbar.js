@@ -9,9 +9,42 @@ template.innerHTML = `
     </div>
     <div class="menu-container">
       <ul id="menu">
-        <li class="item-menu"><a href="">فرانت اند</a></li>
-        <li class="item-menu"><a href="">پایتون</a></li>
-        <li class="item-menu"><a href="">امنیت</a></li>
+        <li class="item-menu">
+         <a href="">فرانت اند<i class="fa-solid fa-caret-down"></i></a>
+         <div class="subMenuContainer">
+            <ul>
+            <li>ری اکت </li>
+             <li><a>ری اکت</a></li>
+             <li><a>ری اکت</a></li>
+             <li><a>ری اکت</a></li>
+             <li><a>ری اکت</a></li>
+             </ul>
+             </div>
+             </li>
+             <li class="item-menu"><a href="">پایتون <i class="fa-solid fa-caret-down"></i></a>
+             <div class="subMenuContainer">
+             <ul>
+             <li><a>ری اکت</a></li>
+             <li><a>ری اکت</a></li>
+             <li><a>ری اکت</a></li>
+             <li><a>ری اکت</a></li>
+             <li><a>ری اکت</a></li>
+             <li><a>ری اکت</a></li>
+            </ul>
+         </div>
+        </li>
+        <li class="item-menu"><a href="">امنیت<i class="fa-solid fa-caret-down"></i></a>
+        <div class="subMenuContainer">
+        <ul>
+        <li><a>ری اکت</a></li>
+        <li><a>ری اکت</a></li>
+        <li><a>ری اکت</a></li>
+        <li><a>ری اکت</a></li>
+        <li><a>ری اکت</a></li>
+        <li><a>ری اکت</a></li>
+       </ul>
+    </div>
+        </li>
         <li class="item-menu"><a href="">مقالات</a></li>
       </ul>
     </div>
