@@ -10,6 +10,16 @@ template.innerHTML = ` <link rel="stylesheet" href="./assets/font/font-awesome/a
       <form class="main-search">
       <input type="search" name="" id="search" placeholder="جستجو..." autocomplete="off">
         <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <div class="serachResultContainer">
+         <div class="searchResult">
+          <div class="searchResultItemContainer">
+          <h4>آموزش پایتون</h4>
+          </div>
+          <div class="searchResultItemContainer">
+          <h4>آموزش پایتون</h4>
+          </div>
+         </div>
+        </div>
       </form>
     </div>
     <div class="information">
@@ -44,10 +54,10 @@ class SearchBox extends HTMLElement {
     this.attachShadow({ mode: "open" });
     this.shadowRoot.appendChild(template.content.cloneNode(true));
     this.shadowRoot.querySelector("#search").addEventListener("focus", (e) => {
-      e.target.parentElement.style.outline = "1px solid gray";
+      e.target.parentElement.classList.add('active')
     });
     this.shadowRoot.querySelector("#search").addEventListener("blur", (e) => {
-      e.target.parentElement.style.outline = "none";
+      e.target.parentElement.classList.remove('active')
     });
     if(window.location.href !== "http://geeklearn.ir/" )
     {

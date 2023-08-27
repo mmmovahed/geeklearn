@@ -32,12 +32,18 @@
   font-size: 1.5rem;
   direction: rtl;
 }
-
+.main-search.active #search {
+  color: gray;
+}
 #search::placeholder {
   direction: rtl;
   color: #fff;
   padding-right: 0.2em;
+  font-family: "samim";
   font-size: 1.5rem;
+}
+.main-search.active #search::placeholder {
+  color: gray;
 }
 #search::-webkit-search-cancel-button {
   display: none;
@@ -47,9 +53,15 @@
   background: rgba(255, 255, 255, 0.2);
   display: flex;
   align-items: center;
-  border-radius: 60px;
+  border-radius: 20px;
   padding: 0.5em;
+  position: relative;
 }
+.main-search.active {
+  background-color: #fff;
+  border-radius: 20px 20px 0 0;
+}
+
 .main-search button {
   border: 0;
   border-radius: 50%;
@@ -61,8 +73,39 @@
   margin: 0 2em 0 0;
   margin-right: auto;
 }
+.main-search.active button {
+  color: rgba(0, 0, 0, 0.6);
+}
 .main-search button i {
   font-size: 2rem;
+}
+
+.serachResultContainer {
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  top: 67px;
+  right: 0;
+  display: none;
+  border-radius: 0 0 20px 20px;
+}
+.main-search.active .serachResultContainer {
+  display: block;
+}
+.searchResult {
+  margin: 10px 10px 20px 10px;
+  padding: 2px 5px;
+}
+.searchResultItemContainer {
+  border: 1px solid #dddddd;
+  padding: 10px;
+  box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.searchResultItemContainer:hover {
+  background-color: #eeeeee;
+  cursor: pointer;
 }
 .search-container {
   width: 75%;
