@@ -11,10 +11,13 @@ class Frontend extends base
     }
     public function login($username,$password)
     {
-        $sql = "SELECT `email`, `password` FROM `tbl_users` WHERE `email`='$username' AND `password`='$password' ";
+        $sql = "SELECT id, `email`, `password` FROM `tbl_users` WHERE `email`='$username' AND `password`='$password' ";
         $result = $this->selectData($sql);
         if ($result->num_rows > 0) {
-            #$row = $result->fetch_assoc();
+            $row=$result->fetch_assoc();
+            $id=$row["id"];
+            $_SESSION["id"]=$id;
+            $this->logger($id, "ورود کاربر");
             $this->redirect("/login&register/login.php?login_status=successfully");
             } else {
             $this->redirect("/login&register/login.php?login_status=failed");
@@ -28,6 +31,7 @@ class Frontend extends base
             $sql = "INSERT INTO `tbl_users`(`email`, `phone`, `password`, `created-at`, `last-login`, `privillage-id`, `status`)
             VALUES ('$email','$phone','$password','$date','$date',1,0)";
             if ($this->queryForInsertData($sql) === TRUE) {
+                $this->logger(0,"عضویت کاربر با ایمیل $email");
                 $this->redirect("/login&register/register.php?register_status=successfully");
             }
             else

@@ -19,6 +19,11 @@ abstract class Base
             return $result;
     }
 
+    public function showTime()
+    {
+        $time=date("Y-m-d--H:i:s");
+        return $time;
+    }
     public function queryForInsertData($q)
     {
 //        $result = $this->dblink->query($q);
@@ -108,5 +113,13 @@ abstract class Base
             return "لغو شده";
         elseif ($status == 5)
             return "به زودی";
+    }
+
+    public function logger($userid, $title)
+    {
+        $ipaddress = getenv("REMOTE_ADDR");
+        $time=$this->showTime();
+        $sql="INSERT INTO `tbl_logs` (`user_id`, `title`, `ip`, `date`) VALUES($userid, '$title', '$ipaddress','$time')";
+        $this->queryForInsertData($sql);
     }
 }

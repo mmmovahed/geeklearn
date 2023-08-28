@@ -51,18 +51,11 @@ require_once "init.php";
                 ?>
                 <course-details price=<?php echo $cost?> teacher="<?php echo $teacher_name?>" numVideo=<?php echo $episode?> duration='<?php echo $time;?>' level='<?php echo $level?>' status='<?php echo $status?>' lastUpdate='<?php echo $last_update?>'></course-details>
                 <course-labels>
-<<<<<<< HEAD
-                    <label-element slot="label" title="آموزش فلاتر"></label-element>
-                    <label-element slot="label" title="آموزش فلاتر"></label-element>
-                    <label-element slot="label" title="آموزش فلاتر"></label-element>
-                   
-=======
                     <?php
                     while($row = $result->fetch_assoc()){
                         echo "<label-element slot='label' title= '".$row["name"]."'></label-element>";
                     }
                     ?>
->>>>>>> 90609fa010e50a11cc98c047f2e4afbc85a32ade
                 </course-labels>
 
             </div>

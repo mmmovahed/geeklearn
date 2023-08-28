@@ -92,7 +92,6 @@ template.innerHTML = `
     </div>
   </div>
 </div>`;
-
 class Navbar extends HTMLElement {
   constructor() {
     super();
