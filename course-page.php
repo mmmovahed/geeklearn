@@ -30,9 +30,9 @@ require_once "init.php";
                     $last_update=$row["last_update"];
                     $in_advance=explode('.',$row["in_advance"]);
                     $in_advance1="";
-                    for ($i=1;$i< count($in_advance);$i++)
+                    for ($i=0;$i< count($in_advance);$i++)
                     {
-                        $in_advance1 .= ($i)."- ".$in_advance[$i]."<br>";
+                        $in_advance1 .= ($i+1)."- ".$in_advance[$i]."<br>";
                     }
                     $thumbnail=$row["thumbnail"];
                     $time=$row["time"];
