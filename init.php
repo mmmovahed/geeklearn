@@ -6,6 +6,7 @@ session_start();
 date_default_timezone_set("Asia/Tehran");
 require_once 'config/config.php';
 require_once 'helper/Base.php';
+require_once 'helper/jdf.php';
 if (stristr($_SERVER["REQUEST_URI"],"/panel/")){
     require_once "helper/Panel.php";
     $main=new Panel();
