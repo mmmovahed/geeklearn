@@ -19,4 +19,4 @@ if ($result->num_rows>0) {
     echo json_encode($array);
 }
 else
-    echo "موردی یافت نشد";
+    echo "[موردی یافت نشد]";
