@@ -8,7 +8,7 @@ $stmt->execute();
 $result = $stmt->get_result();
 $outp = $result->fetch_all(MYSQLI_ASSOC);
 
-//var_dump($outp);
+//var ($outp);
 echo json_encode($outp);
 $conn->close();
 ?>
