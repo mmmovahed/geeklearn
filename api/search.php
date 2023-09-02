@@ -9,14 +9,12 @@ $result=$main->selectData($sql);
 $i=0;
 $array=array();
 if ($result->num_rows>0) {
-    //return json_encode($row);
     while ($row = $result->fetch_assoc())
     {
-        $array[$i][0]=$row["id"];
-        $array[$i][1]=$row["title"];
+        $array[$i][0]=array('id'=>$row["id"], 'title'=>$row["title"]);
         $i++;
     }
     echo json_encode($array);
 }
 else
-    echo "[موردی یافت نشد]";
+    echo "موردی یافت نشد";

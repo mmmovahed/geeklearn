@@ -82,7 +82,7 @@ abstract class Base
         FROM tbl_courses
         INNER JOIN tbl_teachers ON tbl_courses.teacher_id = tbl_teachers.id
         WHERE tbl_courses.status >= 1
-        ORDER BY created_at
+        ORDER BY created_at DESC
         LIMIT 10
         ";
         $result = $this->selectData($query);
