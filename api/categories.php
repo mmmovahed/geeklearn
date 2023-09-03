@@ -17,7 +17,8 @@ foreach ($data as $row) {
     }
 }
 
-echo json_encode(array($menu));
+print json_encode(($menu));
+print json_encode(array($menu));
 
 $mysqli->close();
 
