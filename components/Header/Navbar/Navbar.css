@@ -40,10 +40,9 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 35%;
+  width: 55%;
   height: 90%;
   margin-right: 1rem;
-
   padding-right: 0.2rem;
 }
 .menu-container ul {
@@ -261,19 +260,22 @@
 }
 
 .subMenuContainer > ul {
-  display: flex;
-  flex-direction: column;
+  display: block;
   padding: 10px;
   margin: 10px 0;
+
 }
 .subMenuContainer > ul > li {
   color: #fff;
   transition: color 0.25s ease-in-out;
   cursor: pointer;
+  margin-bottom: .5rem ;
+ 
 }
 .subMenuContainer > ul > li:hover {
   color: rgb(65, 199, 110);
 }
+
 @media screen and (max-width: 850px) {
   #navbar {
     display: none;

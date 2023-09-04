@@ -18,8 +18,6 @@ foreach ($data as $row) {
 }
 
 print json_encode(($menu));
-print json_encode(array($menu));
-
 $mysqli->close();
 
 ?>
