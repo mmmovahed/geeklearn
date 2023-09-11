@@ -1,0 +1,84 @@
+user
+------
+teacher:{
+	add course
+
+	update course
+	delete course
+	
+	send msg
+	
+	q and a
+	
+	wallet(soled course)
+
+	blog
+
+	comment
+
+	setting
+}
+-----------------
+
+writer:{
+	blog:{
+	edit blog
+	add blog
+	del blog
+	}
+	
+	comment
+}
+---------
+supportman:{
+
+	ticket
+	setting
+}
+
+--------------
+admin:{
+	manage coures
+	manage blogs
+	manage users
+	manage teachers
+	manage orders
+	
+	manage categories and sub categories
+	
+
+	manage comment
+	manage ticket
+
+	discount:{
+	discount course
+	discount code
+	}
+	
+
+	charts:{
+	added users
+	
+	soled courses
+
+	
+	}
+
+	logs
+
+	send message:s{
+	broadcaast
+	multicast
+	...
+	}
+}
+
+* course->score
+* both of teachers and admins should have permision to discount grouply
+
+
+
+
+
+
+
