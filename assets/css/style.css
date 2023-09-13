@@ -8,7 +8,7 @@
   font-style: normal;
 }
 @font-face {
-  font-family: 'samim';
+  font-family: "samim";
   src: url(../font/yekan-font/Samim-FD.ttf);
 }
 *,
@@ -22,6 +22,7 @@ body {
   background-color: #fdfdfd;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
@@ -32,16 +33,18 @@ body {
 }
 
 .courses-container {
-  margin: 1em 1em;
   width: 100%;
   max-width: 1200px;
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 1.5em 1em;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1.3em 1rem;
   padding: 0.5em;
   margin: 4rem auto;
+  box-sizing: border-box;
+}
+course-cart {
+  min-width: 220px;
+  max-width: 420px;
 }
 #footer {
   /* border: 1px solid red; */
@@ -54,19 +57,21 @@ body {
   background-color: #2c2d3d;
 }
 
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 475px) {
   .courses-container {
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
+    padding: 0.5rem 1.2rem !important; 
+    justify-content: center;
   }
 }
-@media screen and (max-width: 850px) and (min-width: 575px) {
+@media screen and (max-width: 850px) and (min-width: 475px) {
   .courses-container {
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-@media screen and (max-width: 1100px) and (min-width: 850px) {
+@media screen and (max-width: 1130px) and (min-width: 850px) {
   .courses-container {
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
