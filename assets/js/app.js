@@ -13,7 +13,8 @@ import { CourseLabels } from "../../components/Course/Course-labels/course-label
 import { CourseComments } from "../../components/Course/Comments/comments.js";
 import { Label } from "../../components/Course/Course-labels/Label/label.js";
 import { VideoItem } from "../../components/Course/Course-video/Video-item/video-item.js";
-
+import { PhotoSlider } from "../../components/Slider/photoSlider/PhotoSlider.js";
+import { CourseSlider } from "../../components/Slider/courseSlider/CourseSlider.js";
 
 
 window.customElements.define("site-header", Header);
@@ -31,5 +32,7 @@ window.customElements.define("course-labels", CourseLabels);
 window.customElements.define("course-comments", CourseComments);
 window.customElements.define("label-element",Label);
 window.customElements.define("video-item",VideoItem)
+window.customElements.define("photo-slider",PhotoSlider)
+window.customElements.define("course-slider",CourseSlider)
 
 
