@@ -1,0 +1,25 @@
+.container {
+  max-width: 1200px;
+  width: 100vw;
+  margin: 4rem auto;
+  box-sizing: border-box;
+  padding: .5rem;
+}
+swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+swiper-slide {
+  padding: 2rem 0;
+}
+course-cart {
+  min-width: 220px;
+  max-width: 420px;
+}
+
+@media screen and (max-width: 475px) {
+  .container{
+    padding: .5rem 1.2rem !important;
+  }
+}
