@@ -15,4 +15,6 @@ else{
     require_once "helper/Frontend.php";
     $main = new Frontend();
 }
+require_once "helper/status.php";
+$stausCode=new status();
 ?>

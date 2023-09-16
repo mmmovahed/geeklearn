@@ -78,4 +78,28 @@ class Panel extends Base
             }
         }
     }
+
+    public function insertCountOfCoursesToStatisticsTable()
+    {
+        $date=$this->showTime();
+        $sql="SELECT id, title FROM tbl_courses";
+        $result=$this->selectData($sql);
+        if ($result->num_rows>0)
+        {
+            while($row=$result->fetch_assoc()){
+                $title=$row["title"];
+                $q="SELECT COUNT(`course_id`) AS `count` FROM `tbl_carts` WHERE `status`=2 AND `course_id`=".$row["id"].";";
+                $result1=$this->selectData($q);
+                if ($result1->num_rows>0) {
+                    while ($row1 = $result1->fetch_assoc()) {
+                        $count = $row1["count"];
+                        $sql1 = "INSERT INTO `tbl_statistics`(`type_code`, `hint`, `name`, `value`, `date`, `status`)
+                    VALUES (1111, '$title', '$row[id]', '$count', '$date' ,1)";
+
+                        $this->queryForInsertData($sql1);
+                    }
+                }
+            }
+        }
+    }
 }

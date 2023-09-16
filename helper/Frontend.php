@@ -61,4 +61,32 @@ class Frontend extends base
         $result = $this->selectData($query);
         return $result;
     }
+
+    function getComments( $parent = null)
+    {
+        $sql = "SELECT * FROM `tbl_courses_comments`";
+        $sql .= $parent ? " WHERE `parents_id`=" . (int)$parent : null;
+
+        $query = $this->selectData($sql);
+        $results = array();
+        while ($result = mysqli_fetch_assoc($query)) {
+            if ($children = $this->getComments($result['id'])) {
+                $result['children'] = $children;
+            }
+            $results[] = $result;
+        }
+        return $results;
+    }
+
+    function renderComments(array $comments)
+    {
+        $output = '';
+        foreach ($comments as $comment) {
+            $output .= $comment['comment'];
+            if (isset($comment['children'])) {
+                $output .= $this->renderComments($comment['children']);
+            }
+        }
+        return $output;
+    }
 }
