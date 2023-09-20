@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "samim";
+  src: url(../../font/yekan-font/Samim-FD.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "samim";
+}
+body {
+  direction: rtl;
+}
