@@ -1,6 +1,6 @@
 <?php
 require_once "init.php";
- $x=(isset($_GET["id"]) AND !empty($_GET["id"])) ? ($id=$_GET["id"]):($main->redirect("index.php"));
+ $x=(isset($_GET["id"]) AND !empty($_GET["id"])) ? ($id=$_GET["id"]):($main->redirect("testingFunctions.php"));
 ?>
 <!DOCTYPE html>
 <html lang="en">

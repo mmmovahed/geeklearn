@@ -98,21 +98,17 @@ abstract class Base
     public function ascertainStatus($status)
     {
         if ($status == 0)
-            return "در انتظار تایید";
+            return "به زودی";
         elseif ($status == 1)
-            return "فعال";
-        elseif ($status == 2)
-            return "رد صلاحیت";
-        elseif ($status == 3)
-            return "غیر فعال";
-        elseif ($status == 4)
             return "در حال برگذاری";
-        elseif ($status == 5)
+        elseif ($status == 2)
             return "تکمیل شده";
-        elseif ($status == 5)
+        elseif ($status == 3)
+            return "پیش فروش";
+        elseif ($status == 4)
             return "لغو شده";
         elseif ($status == 5)
-            return "به زودی";
+            return "به دلیل عدم کیفیت، دوره  حذف شد.";
     }
 
     public function logger($userid, $title)
@@ -121,5 +117,23 @@ abstract class Base
         $time=$this->showTime();
         $sql="INSERT INTO `tbl_logs` (`user_id`, `title`, `ip`, `date`) VALUES($userid, '$title', '$ipaddress','$time')";
         $this->queryForInsertData($sql);
+    }
+
+    public function user_status($status)
+    {
+        if ($status == 0)
+            return "غیرفعال";
+        elseif ($status == 1)
+            return "احراز هویت نشده";
+        elseif ($status == 2)
+            return "کاربر";
+        elseif ($status == 3)
+            return "نویسنده";
+        elseif ($status == 4)
+            return "استاد";
+        elseif ($status == 5)
+            return "کارشناس";
+        elseif ($status == 5)
+            return "مدیر";
     }
 }

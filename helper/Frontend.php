@@ -11,12 +11,13 @@ class Frontend extends base
     }
     public function login($username,$password)
     {
-        $sql = "SELECT id, `email`, `password` FROM `tbl_users` WHERE `email`='$username' AND `password`='$password' ";
+        $sql = "SELECT id, `email`, `password`, `privillage-id` FROM `tbl_users` WHERE `email`='$username' AND `password`='$password'";
         $result = $this->selectData($sql);
         if ($result->num_rows > 0) {
             $row=$result->fetch_assoc();
             $id=$row["id"];
-            $_SESSION["id"]=$id;
+            $_SESSION["user_id"]=$id;
+            $_SESSION["user_status"]=$row["privillage-id"];
             $this->logger($id, "ورود کاربر");
             $this->redirect("/login&register/login.php?login_status=successfully");
             } else {

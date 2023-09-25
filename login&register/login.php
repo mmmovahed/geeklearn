@@ -32,7 +32,6 @@
             else if(isset($_GET["login_status"]) AND $_GET["login_status"]=="failed")
                 $main->setDangerMessage("دوباره سعی کنید.");
 
-
             ?>
           <form id="form" action="login.php" method="post">
             <input id="email" type="email" name="email" placeholder="ایمیل" />
