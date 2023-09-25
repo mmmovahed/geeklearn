@@ -1,6 +1,6 @@
 let template = document.createElement("template");
 template.innerHTML = `  
-<link rel="stylesheet" href="../assets/tailwindCss/css/main.css" />
+<link rel="stylesheet" href="../../assets/tailwindCss/css/main.css" />
 <nav class="bg-white sticky top-0 left-0 right-0 z-20">
 <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
   <div class="relative flex h-16 items-center justify-between">
@@ -60,7 +60,7 @@ template.innerHTML = `
       <div class="flex flex-shrink-0 items-center">
         <img
           class="h-8 w-auto"
-          src="../assets/image/logo.png"
+          src="../../assets/image/logo.png"
           alt="Your Company"
         />
       </div>
@@ -126,7 +126,7 @@ template.innerHTML = `
             <span class="sr-only">Open user menu</span>
             <img
               class="h-10 w-10 rounded-full object-cover"
-              src="../assets/image/panel/profile.jpg"
+              src="../../assets/image/panel/profile.jpg"
               alt=""
             />
           </button>
