@@ -7,7 +7,7 @@ require_once '../../config/config.php';
 require_once '../../helper/Base.php';
 require_once '../../helper/jdf.php';
 require_once '../../helper/panel.php';
-require_once "helper/status.php";
+require_once "../../helper/status.php";
 $status_code=new status();
 $main=new Panel();
 if (!(isset($_SESSION["user_id"]) AND isset($_SESSION["user_status"])))

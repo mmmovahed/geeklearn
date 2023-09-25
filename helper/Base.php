@@ -104,5 +104,9 @@ abstract class Base
         $this->queryForInsertData($sql);
     }
 
+    public function not_found()
+    {
+        header("Location:/Not_found/");
+    }
 
 }
