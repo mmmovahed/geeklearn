@@ -1,0 +1,3 @@
+$main->updateCountOfTheEpisodesOfTheCourses();
+$main->updateTimeOfTheCourses();
+$main->insertCountOfCoursesToStatisticsTable();

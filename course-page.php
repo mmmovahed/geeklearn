@@ -1,6 +1,6 @@
 <?php
 require_once "init.php";
- $x=(isset($_GET["id"]) AND !empty($_GET["id"])) ? ($id=$_GET["id"]):($main->redirect("index.php"));
+ $x=(isset($_GET["id"]) AND !empty($_GET["id"])) ? ($id=$_GET["id"]):($main->redirect("testingFunctions.php"));
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,7 +43,7 @@ require_once "init.php";
                     $teacher_name=$row["teacher_name"];
                     $teacher_id=$row["teacher_id"];
                     $time=$row["time"];
-                    $status=$main->ascertainStatus($row["status"]);
+                    $status=$status_code->course_Status($row["status"]);
                     $episode=$row["episode"];
                 }
                 if ($cost==0 or $cost == null)

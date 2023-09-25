@@ -95,25 +95,6 @@ abstract class Base
             mysqli_close($this->dblink);
     }
 
-    public function ascertainStatus($status)
-    {
-        if ($status == 0)
-            return "در انتظار تایید";
-        elseif ($status == 1)
-            return "فعال";
-        elseif ($status == 2)
-            return "رد صلاحیت";
-        elseif ($status == 3)
-            return "غیر فعال";
-        elseif ($status == 4)
-            return "در حال برگذاری";
-        elseif ($status == 5)
-            return "تکمیل شده";
-        elseif ($status == 5)
-            return "لغو شده";
-        elseif ($status == 5)
-            return "به زودی";
-    }
 
     public function logger($userid, $title)
     {
@@ -122,4 +103,10 @@ abstract class Base
         $sql="INSERT INTO `tbl_logs` (`user_id`, `title`, `ip`, `date`) VALUES($userid, '$title', '$ipaddress','$time')";
         $this->queryForInsertData($sql);
     }
+
+    public function not_found()
+    {
+        header("Location:/Not_found/");
+    }
+
 }
