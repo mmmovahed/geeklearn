@@ -10,7 +10,7 @@ require_once '../../helper/panel.php';
 require_once "../../helper/status.php";
 $status_code=new status();
 $main=new Panel();
-if (!(isset($_SESSION["user_id"]) AND isset($_SESSION["user_status"])))
-{
-    header("Location: /404.php");
-}
+//if (!(isset($_SESSION["user_id"]) AND isset($_SESSION["user_status"])))
+//{
+//    header("Location: /404.php");
+//}
