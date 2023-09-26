@@ -102,4 +102,20 @@ class Panel extends Base
             }
         }
     }
+
+    public function check_permission($per)
+    {
+        if ($_SESSION["user_status"]<$per)
+            header("Location: /not_found/");
+    }
+
+    public function all_Posts()
+    {
+        $sql = "
+        SELECT c.id, c.title, c.thumbnail, c.last_update, cc.name category, c.cost, c.discount, CONCAT(t.name, ' ', t.family) teacher_name, c.status
+        FROM `tbl_courses` c INNER JOIN `tbl_teachers` t ON c.teacher_id = t.id LEFT JOIN tbl_courses_categories cc ON c.category_id = cc.id;";
+        $result = $this->selectData($sql);
+        $data = $result->fetch_all(MYSQLI_ASSOC);
+        return json_encode($data);
+        }
 }
