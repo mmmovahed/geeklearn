@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../assets/css/cms/cms.css" />
+    <link rel="stylesheet" href="../../assets/tailwindCss/css/main.css" />
+    <link rel="stylesheet" href="../../assets/font/font-awesome/all.min.css" />
+
+    <title>پنل ادمین</title>
+  </head>
+  <body class="bg-[#f7f8f9]">
+    <my-header></my-header>
+
+    <div
+      class="relative my-5 bg-transparent grid md:grid-cols-[1fr,3fr] grid-cols-[1fr] gap-x-5 px-3"
+    >
+      <my-sidebar></my-sidebar>
+
+      <div class="w-full flex flex-col gap-y-5 overflow-auto table-container">
+        <div
+          class="bg-white md:mt-0 mt-5 py-1 h-[500px] overflow-auto table-container"
+        >
+          <div class="w-full flex justify-center items-center p-3">
+            <form
+              action=""
+              method="post"
+              class="w-full flex justify-start flex-wrap p-1 gap-y-5 pb-20 relative"
+            >
+              <div
+                class="md:w-1/2 w-full p-1 flex justify-center md:justify-start items-center gap-0.5"
+              >
+                <label for="title" class="text-[#717981] w-24 text-center"
+                  >عنوان دوره :</label
+                >
+                <input
+                  id="title"
+                  type="text"
+                  placeholder=""
+                  class="border border-[#ddd5df] rounded-md px-2 py-1 outline-none focus:border focus:border-[#5597dd] w-2/3 transition-color duration-300"
+                />
+              </div>
+              <div
+                class="md:w-1/2 w-full p-1 flex justify-center md:justify-start items-center gap-0.5"
+              >
+                <label for="title" class="text-[#717981] w-24 text-center"
+                  >مدرس دوره :</label
+                >
+                <input
+                  id="title"
+                  type="text"
+                  placeholder=""
+                  class="border border-[#ddd5df] rounded-md px-2 py-1 outline-none focus:border focus:border-[#5597dd] w-2/3 transition-color duration-300"
+                />
+              </div>
+              <div
+                class="md:w-1/2 w-full p-1 flex justify-center md:justify-start items-center gap-0.5"
+              >
+                <label for="title" class="text-[#717981] w-24 text-center"
+                  >قیمت دوره :</label
+                >
+                <input
+                  id="title"
+                  type="text"
+                  placeholder=""
+                  class="border border-[#ddd5df] rounded-md px-2 py-1 outline-none focus:border focus:border-[#5597dd] w-2/3 transition-color duration-300"
+                />
+              </div>
+              <div
+                class="md:w-1/2 w-full p-1 flex justify-center md:justify-start items-center gap-0.5"
+              >
+                <label for="mytime" class="text-[#717981] w-24 text-center">
+                  مدت زمان :</label
+                >
+                <input
+                  id="mytime"
+                  type="time"
+                  value=""
+                  placeholder=""
+                  class="border border-[#ddd5df] rounded-md px-2 py-1 outline-none focus:border focus:border-[#5597dd] w-2/3 transition-color duration-300"
+                />
+              </div>
+              <div
+                class="md:w-1/2 w-full p-1 flex justify-center md:justify-start items-center gap-0.5"
+              >
+                <label for="title" class="text-[#717981] w-24 text-center"
+                  >توضیحات :</label
+                >
+                <textarea
+                  id="title"
+                  type="text"
+                  placeholder=""
+                  class="border border-[#ddd5df] rounded-md px-2 py-1 outline-none focus:border focus:border-[#5597dd] w-2/3 transition-color duration-300"
+                ></textarea>
+              </div>
+              <div
+                class="md:w-1/2 w-full p-1 flex justify-center md:justify-start items-center gap-0.5"
+              >
+                <label for="title" class="text-[#717981] w-24 text-center"
+                  >ویژگی ها :</label
+                >
+                <textarea
+                  id="title"
+                  type="text"
+                  placeholder=""
+                  class="border border-[#ddd5df] rounded-md px-2 py-1 outline-none focus:border focus:border-[#5597dd] w-2/3 transition-color duration-300"
+                ></textarea>
+              </div>
+              <div
+                class="md:w-1/2 w-full p-1 flex justify-center md:justify-start items-center gap-0.5"
+              >
+                <label for="title" class="text-[#717981] w-24 text-center"
+                  >پیش نیازها :</label
+                >
+                <textarea
+                  id="title"
+                  type="text"
+                  placeholder=""
+                  class="border border-[#ddd5df] rounded-md px-2 py-1 outline-none focus:border focus:border-[#5597dd] w-2/3 transition-color duration-300"
+                ></textarea>
+              </div>
+              <div
+                class="md:w-1/2 w-full p-1 flex justify-center md:justify-start items-center gap-0.5"
+              >
+                <label for="level" class="text-[#717981] w-24 text-center">
+                  سطح :</label
+                >
+                <select
+                  name="level"
+                  id="level"
+                  class="border border-[#ddd5df] rounded-md px-2 py-1 outline-none focus:border focus:border-[#5597dd] w-2/3 transition-color duration-300"
+                >
+                  <option value="elementary">مقدماتی</option>
+                  <option value="intermediate">متوسط</option>
+                  <option value="advanced">پیشرفته</option>
+                </select>
+              </div>
+              <div
+                class="md:w-1/2 w-full p-1 flex justify-center md:justify-start items-center gap-0.5"
+              >
+                <label for="file" class="text-[#717981] w-24 text-center">
+                  تصویر :</label
+                >
+                <label
+                  for="file"
+                  class="text-[#717981] h-[50px] w-2/3 rounded-md border border-dashed border-[#999] hover:cursor-pointer hover:text-[#5597dd] hover:border hover:border-dashed hover:border-[#5597dd] flex justify-center items-center transition-color duration-300"
+                  >Upload file</label
+                >
+                <input type="file" id="file" class="hidden" />
+              </div>
+              <div class="absolute bottom-0 right-2 w-full">
+                <button type="submit" class="btn">ثبت</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="../../assets/js/admin.js" defer></script>
+  </body>
+</html>

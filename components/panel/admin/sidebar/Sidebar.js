@@ -72,7 +72,7 @@ template.innerHTML = `
                 <a  href="http://geeklearn.ir/panel/admin/coursesList.html" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1"> لیست دوره ها</a>
                 </li>
                 <li class="flex">
-                <a href="javascript:void(0);" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1">افزودن دوره جدید</a>
+                <a href="http://geeklearn.ir/panel/admin/addNewCourse.html" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1">افزودن دوره جدید</a>
                 </li>
                 
               </ul>
