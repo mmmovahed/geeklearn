@@ -1,6 +1,6 @@
 <?php
 require_once "init.php";
-$per=5;
+$per=6;
 //$main->check_permission($per);
 
 echo $main->all_Posts();

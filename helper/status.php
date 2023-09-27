@@ -19,7 +19,7 @@ class status extends Base
             return "استاد";
         elseif ($status == 5)
             return "کارشناس";
-        elseif ($status == 5)
+        elseif ($status == 6)
             return "مدیر";
     }
 
