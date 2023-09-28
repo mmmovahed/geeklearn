@@ -3,7 +3,7 @@ template.innerHTML = `
 <link rel="stylesheet" href="../../assets/tailwindCss/css/main.css" />
 <link rel="stylesheet" href="../../assets/font/font-awesome/all.min.css" />
     <div
-        class="sidebar-container md:w-full rounded-sm bg-white md:flex items-start flex-col gap-y-2 hidden md:static transition-transform overflow-auto fixed z-40 top-0 bottom-0 right-0  w-1/2"
+        class="sidebar-container md:h-auto h-screen rounded-sm bg-white md:flex items-start flex-col gap-y-2  md:overflow-hidden overflow-auto transition-[right] duration-500  md:static fixed md:z-0 z-30  top-0 right-[-400px]  md:w-full w-1/2"
       >
         <div class="w-full flex flex-col justify-center items-center py-2">
            <button class="self-end ml-3 sidebar-close md:hidden block">
@@ -69,7 +69,7 @@ template.innerHTML = `
                 <i class="fa-solid fa-angle-left mr-auto text-gray-500"></i>
               </a>
               <ul
-                class="list-none flex-col w-full gap-y-3 pt-5 subMenuList text-sm hidden"
+                class="list-none flex flex-col w-full gap-y-3 subMenuList text-sm "
               >
                 <li class="flex">
                 <a  href="http://geeklearn.ir/panel/admin/coursesList.html" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1"> لیست دوره ها</a>
@@ -77,7 +77,6 @@ template.innerHTML = `
                 <li class="flex">
                 <a href="http://geeklearn.ir/panel/admin/addNewCourse.html" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1">افزودن دوره جدید</a>
                 </li>
-                
               </ul>
             </li>
             <li class="text-sm itemMenu py-3 px-1 cursor-pointer">
@@ -90,7 +89,7 @@ template.innerHTML = `
                 <i class="fa-solid fa-angle-left mr-auto text-gray-500"></i>
               </a>
               <ul
-              class="list-none flex-col w-full gap-y-3 pt-5 subMenuList text-sm hidden"
+              class="list-none flex flex-col w-full gap-y-3 subMenuList text-sm"
             >
               <li class="flex">
               <a  href="javascript:void(0);" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1"> لیست دوره ها</a>
@@ -112,7 +111,7 @@ template.innerHTML = `
                 <i class="fa-solid fa-angle-left mr-auto text-gray-500"></i>
               </a>
               <ul
-              class="list-none flex-col w-full gap-y-3 pt-5 subMenuList text-sm hidden"
+              class="list-none flex flex-col w-full gap-y-3 subMenuList text-sm"
             >
               <li class="flex">
               <a  href="javascript:void(0);" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1"> لیست دوره ها</a>
@@ -133,7 +132,7 @@ template.innerHTML = `
                 <i class="fa-solid fa-angle-left mr-auto text-gray-500"></i>
               </a>
               <ul
-              class="list-none flex-col w-full gap-y-3 pt-5 subMenuList text-sm hidden"
+              class="list-none flex flex-col w-full gap-y-3 subMenuList text-sm"
             >
               <li class="flex">
               <a  href="javascript:void(0);" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1"> لیست دوره ها</a>
@@ -154,7 +153,7 @@ template.innerHTML = `
                 <i class="fa-solid fa-angle-left mr-auto text-gray-500"></i>
               </a>
               <ul
-              class="list-none flex-col w-full gap-y-3 pt-5 subMenuList text-sm hidden"
+              class="list-none flex flex-col w-full gap-y-3 subMenuList text-sm"
             >
               <li class="flex">
               <a  href="javascript:void(0);" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1"> لیست دوره ها</a>
@@ -175,7 +174,7 @@ template.innerHTML = `
                 <i class="fa-solid fa-angle-left mr-auto text-gray-500"></i>
               </a>
               <ul
-              class="list-none flex-col w-full gap-y-3 pt-5 subMenuList text-sm hidden"
+              class="list-none flex flex-col w-full gap-y-3 subMenuList text-sm"
             >
               <li class="flex">
               <a  href="javascript:void(0);" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1"> لیست دوره ها</a>
@@ -197,7 +196,7 @@ template.innerHTML = `
                 <i class="fa-solid fa-angle-left mr-auto text-gray-500"></i>
               </a>
               <ul
-              class="list-none flex-col w-full gap-y-3 pt-5 subMenuList text-sm hidden"
+              class="list-none flex flex-col w-full gap-y-3 subMenuList text-sm"
             >
               <li class="flex">
               <a  href="javascript:void(0);" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1"> لیست دوره ها</a>
@@ -219,7 +218,7 @@ template.innerHTML = `
                 <i class="fa-solid fa-angle-left mr-auto text-gray-500"></i>
               </a>
               <ul
-              class="list-none flex-col w-full gap-y-3 pt-5 subMenuList text-sm hidden"
+              class="list-none flex flex-col w-full gap-y-3 subMenuList text-sm"
             >
               <li class="flex">
               <a  href="javascript:void(0);" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1"> لیست دوره ها</a>
@@ -241,7 +240,7 @@ template.innerHTML = `
                 <i class="fa-solid fa-angle-left mr-auto text-gray-500"></i>
               </a>
               <ul
-              class="list-none flex-col w-full gap-y-3 pt-5 subMenuList text-sm hidden"
+              class="list-none flex flex-col w-full gap-y-3 subMenuList text-sm"
             >
               <li class="flex">
               <a  href="javascript:void(0);" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1"> لیست دوره ها</a>
@@ -266,19 +265,16 @@ class Sidebar extends HTMLElement {
     const listItemsMenu = this.shadowRoot.querySelectorAll(".itemMenu");
     listItemsMenu.forEach((item) => {
       item.addEventListener("click", () => {
+        item.classList.toggle("open");
         let subMenuList = item.lastElementChild;
+        console.log(subMenuList);
         let angleIcon = item.firstElementChild.lastElementChild;
         console.log(subMenuList);
-        if (subMenuList.className.includes("subMenuList")) {
-          subMenuList.classList.toggle("flex");
-          subMenuList.classList.toggle("hidden");
-          if (subMenuList.className.includes("hidden")) {
-            angleIcon.className =
-              "fa-solid fa-angle-left mr-auto text-gray-500";
-          } else {
-            angleIcon.className =
-              "fa-solid fa-angle-down mr-auto text-gray-500";
-          }
+
+        if (item.className.includes("open")) {
+          angleIcon.className = "fa-solid fa-angle-down mr-auto text-gray-500";
+        } else {
+          angleIcon.className = "fa-solid fa-angle-left mr-auto text-gray-500";
         }
       });
     });
@@ -291,10 +287,12 @@ class Sidebar extends HTMLElement {
       this.shadowRoot.querySelector(".sidebar-container");
 
     sidebarOpenBtn.addEventListener("click", () => {
-      sidebarContainer.classList.remove("hidden");
+      sidebarContainer.classList.remove("right-[-400px]");
+      sidebarContainer.classList.add("right-0");
     });
     sidebarCloseBtn.addEventListener("click", () => {
-      sidebarContainer.classList.add("hidden");
+      sidebarContainer.classList.add("right-[-400px]");
+      sidebarContainer.classList.remove("right-0");
     });
   }
 }
