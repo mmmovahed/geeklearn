@@ -16,15 +16,14 @@ class status extends Base
         elseif ($status == 3)
             return "نویسنده";
         elseif ($status == 4)
-            return "استاد";
-        elseif ($status == 5)
             return "کارشناس";
+        elseif ($status == 5)
+            return "استاد";
         elseif ($status == 6)
             return "مدیر";
     }
 
-    public function course_Status($status)
-    {
+    public function course_Status($status){
         if ($status == 0)
             return "به زودی";
         elseif ($status == 1)
@@ -37,5 +36,7 @@ class status extends Base
             return "لغو شده";
         elseif ($status == 5)
             return "حذف شده(عدم کیفیت)";
+        elseif ($status == 6)
+            return "در انتظار تایید";
     }
 }

@@ -1,0 +1,19 @@
+So on this file, I want to explain every detail about the panel `API`
+
+---------------------- Courses' API -------------------
+
+* All Courses ->all_courses.php -> GET just for read ;
+
+* Add Course -> add_course.php -> POST{
+    ***** Entrance object ******
+     *  title
+     *  description
+     *  thumbnail
+     *  teacher_id
+     *  advantages
+     *  category_id
+     *  cost
+     *  in_advance
+     *  level
+     *  [label in array] -> labels
+}
