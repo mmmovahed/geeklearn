@@ -21,6 +21,10 @@ class Header extends HTMLElement {
     if (window.location.href !== "http://geeklearn.ir/") {
       this.shadowRoot.querySelector(".header").className += "-course";
     }
+    const datas = {
+      email: 1,
+      password: "ali",
+    };  
   }
 }
 

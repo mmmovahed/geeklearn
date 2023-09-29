@@ -1,12 +1,11 @@
 <?php
-//$json = '{"a":1,"b":2,"c":3,"d":4,"e":5}';
-//$json=json_decode($json,true);
-////var_dump($json);
-////var_dump(json_decode($json, true));
-
- $json = file_get_contents('php://input');
-
-// Converts it into a PHP object
+require_once "../init.php";
+$json = file_get_contents('php://input');
 $data = json_decode($json, true);
-
-var_dump($data);
+if (!empty($json) || $json != null)
+{
+    $sql="INSERT INTO `tbl_logs`(`user_id`, `title`, `ip`, `date`)  VALUES (5,'5','5','5')";
+    $main->queryForInsertData($sql);
+}
+header("Content-Type: application/json; charset=UTF-8");
+echo json_encode($data);

@@ -20,7 +20,7 @@ require_once "init.php";
     <site-header></site-header>
     <photo-slider></photo-slider>
     <div class="courses-container">
-     <?php
+      <?php
       $result = $main->showTheLatestCourses();
       if ($result->num_rows > 0)
         while ($row = $result->fetch_assoc()) {
@@ -28,7 +28,7 @@ require_once "init.php";
           echo "<course-cart courseId='./course-page.php?id=$row[id]' course-title='" . $row["title"] . "' image=$row[thumbnail] price=" . $cost . " teacher='" . $row["teacher_name"] . "' duration='" . $row["time"] . "' teacherId='./teacher-page.php?id=" . $row["teacher_id"] . "' ></course-cart>";
         }
 
-      ?> 
+      ?>
 
     </div>
     <course-slider>
@@ -39,6 +39,7 @@ require_once "init.php";
     </footer>
   </div>
   <script type="module" src="./assets/js/app.js" defer></script>
+  <script src="./test.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
 
 </body>
