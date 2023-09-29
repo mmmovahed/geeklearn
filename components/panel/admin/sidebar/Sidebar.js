@@ -3,9 +3,12 @@ template.innerHTML = `
 <link rel="stylesheet" href="../../assets/tailwindCss/css/main.css" />
 <link rel="stylesheet" href="../../assets/font/font-awesome/all.min.css" />
     <div
-        class="w-full rounded-sm bg-white flex items-start flex-col gap-y-2"
+        class="sidebar-container md:h-auto h-screen rounded-sm bg-white md:flex items-start flex-col gap-y-2  md:overflow-hidden overflow-auto transition-[right] duration-500  md:static fixed md:z-0 z-30  top-0 right-[-400px]  md:w-full w-1/2"
       >
         <div class="w-full flex flex-col justify-center items-center py-2">
+           <button class="self-end ml-3 sidebar-close md:hidden block">
+             <svg width="20px" height="20px" viewBox="-0.5 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M3 21.32L21 3.32001" stroke="#bababa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M3 3.32001L21 21.32" stroke="#bababa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+           </button>
           <img
             class="rounded-full h-28 w-28 object-cover mt-7"
             src="../../assets/image/panel/profile.jpg"
@@ -66,7 +69,7 @@ template.innerHTML = `
                 <i class="fa-solid fa-angle-left mr-auto text-gray-500"></i>
               </a>
               <ul
-                class="list-none flex-col w-full gap-y-3 pt-5 subMenuList text-sm hidden"
+                class="list-none flex flex-col w-full gap-y-3 subMenuList text-sm "
               >
                 <li class="flex">
                 <a  href="http://geeklearn.ir/panel/admin/coursesList.html" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1"> لیست دوره ها</a>
@@ -74,7 +77,6 @@ template.innerHTML = `
                 <li class="flex">
                 <a href="http://geeklearn.ir/panel/admin/addNewCourse.html" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1">افزودن دوره جدید</a>
                 </li>
-                
               </ul>
             </li>
             <li class="text-sm itemMenu py-3 px-1 cursor-pointer">
@@ -87,7 +89,7 @@ template.innerHTML = `
                 <i class="fa-solid fa-angle-left mr-auto text-gray-500"></i>
               </a>
               <ul
-              class="list-none flex-col w-full gap-y-3 pt-5 subMenuList text-sm hidden"
+              class="list-none flex flex-col w-full gap-y-3 subMenuList text-sm"
             >
               <li class="flex">
               <a  href="javascript:void(0);" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1"> لیست دوره ها</a>
@@ -109,7 +111,7 @@ template.innerHTML = `
                 <i class="fa-solid fa-angle-left mr-auto text-gray-500"></i>
               </a>
               <ul
-              class="list-none flex-col w-full gap-y-3 pt-5 subMenuList text-sm hidden"
+              class="list-none flex flex-col w-full gap-y-3 subMenuList text-sm"
             >
               <li class="flex">
               <a  href="javascript:void(0);" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1"> لیست دوره ها</a>
@@ -130,7 +132,7 @@ template.innerHTML = `
                 <i class="fa-solid fa-angle-left mr-auto text-gray-500"></i>
               </a>
               <ul
-              class="list-none flex-col w-full gap-y-3 pt-5 subMenuList text-sm hidden"
+              class="list-none flex flex-col w-full gap-y-3 subMenuList text-sm"
             >
               <li class="flex">
               <a  href="javascript:void(0);" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1"> لیست دوره ها</a>
@@ -151,7 +153,7 @@ template.innerHTML = `
                 <i class="fa-solid fa-angle-left mr-auto text-gray-500"></i>
               </a>
               <ul
-              class="list-none flex-col w-full gap-y-3 pt-5 subMenuList text-sm hidden"
+              class="list-none flex flex-col w-full gap-y-3 subMenuList text-sm"
             >
               <li class="flex">
               <a  href="javascript:void(0);" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1"> لیست دوره ها</a>
@@ -172,7 +174,7 @@ template.innerHTML = `
                 <i class="fa-solid fa-angle-left mr-auto text-gray-500"></i>
               </a>
               <ul
-              class="list-none flex-col w-full gap-y-3 pt-5 subMenuList text-sm hidden"
+              class="list-none flex flex-col w-full gap-y-3 subMenuList text-sm"
             >
               <li class="flex">
               <a  href="javascript:void(0);" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1"> لیست دوره ها</a>
@@ -194,7 +196,7 @@ template.innerHTML = `
                 <i class="fa-solid fa-angle-left mr-auto text-gray-500"></i>
               </a>
               <ul
-              class="list-none flex-col w-full gap-y-3 pt-5 subMenuList text-sm hidden"
+              class="list-none flex flex-col w-full gap-y-3 subMenuList text-sm"
             >
               <li class="flex">
               <a  href="javascript:void(0);" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1"> لیست دوره ها</a>
@@ -216,7 +218,7 @@ template.innerHTML = `
                 <i class="fa-solid fa-angle-left mr-auto text-gray-500"></i>
               </a>
               <ul
-              class="list-none flex-col w-full gap-y-3 pt-5 subMenuList text-sm hidden"
+              class="list-none flex flex-col w-full gap-y-3 subMenuList text-sm"
             >
               <li class="flex">
               <a  href="javascript:void(0);" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1"> لیست دوره ها</a>
@@ -238,7 +240,7 @@ template.innerHTML = `
                 <i class="fa-solid fa-angle-left mr-auto text-gray-500"></i>
               </a>
               <ul
-              class="list-none flex-col w-full gap-y-3 pt-5 subMenuList text-sm hidden"
+              class="list-none flex flex-col w-full gap-y-3 subMenuList text-sm"
             >
               <li class="flex">
               <a  href="javascript:void(0);" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1"> لیست دوره ها</a>
@@ -261,24 +263,36 @@ class Sidebar extends HTMLElement {
     this.attachShadow({ mode: "open" });
     this.shadowRoot.appendChild(template.content.cloneNode(true));
     const listItemsMenu = this.shadowRoot.querySelectorAll(".itemMenu");
-
     listItemsMenu.forEach((item) => {
       item.addEventListener("click", () => {
+        item.classList.toggle("open");
         let subMenuList = item.lastElementChild;
+        console.log(subMenuList);
         let angleIcon = item.firstElementChild.lastElementChild;
         console.log(subMenuList);
-        if (subMenuList.className.includes("subMenuList")) {
-          subMenuList.classList.toggle("flex");
-          subMenuList.classList.toggle("hidden");
-          if (subMenuList.className.includes("hidden")) {
-            angleIcon.className =
-              "fa-solid fa-angle-left mr-auto text-gray-500";
-          } else {
-            angleIcon.className =
-              "fa-solid fa-angle-down mr-auto text-gray-500";
-          }
+
+        if (item.className.includes("open")) {
+          angleIcon.className = "fa-solid fa-angle-down mr-auto text-gray-500";
+        } else {
+          angleIcon.className = "fa-solid fa-angle-left mr-auto text-gray-500";
         }
       });
+    });
+
+    // Close & open sidebar in mobile
+
+    const sidebarOpenBtn = document.querySelector(".sidebar-open");
+    const sidebarCloseBtn = this.shadowRoot.querySelector(".sidebar-close");
+    const sidebarContainer =
+      this.shadowRoot.querySelector(".sidebar-container");
+
+    sidebarOpenBtn.addEventListener("click", () => {
+      sidebarContainer.classList.remove("right-[-400px]");
+      sidebarContainer.classList.add("right-0");
+    });
+    sidebarCloseBtn.addEventListener("click", () => {
+      sidebarContainer.classList.add("right-[-400px]");
+      sidebarContainer.classList.remove("right-0");
     });
   }
 }

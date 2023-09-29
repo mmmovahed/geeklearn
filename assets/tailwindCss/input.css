@@ -46,7 +46,7 @@
   width: 100%;
   height: 0%;
   background: #3498db;
-  z-index:-99;
+  z-index: -99;
   transition: 0.8s;
   bottom: 0;
   border-radius: 50% 50% 0 0;
@@ -55,3 +55,18 @@
 .btn:hover::before {
   height: 180%;
 }
+
+.itemMenu ul {
+  max-height: 0px;
+  min-height: 0px;
+  overflow: hidden;
+  transition: all 0.25s ease-in-out;
+  padding: 0;
+}
+
+.itemMenu.open ul {
+  min-height: 100px;
+  max-height: 200px;
+  padding-top: 1.5rem;
+}
+
