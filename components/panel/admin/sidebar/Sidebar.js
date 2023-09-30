@@ -1,4 +1,5 @@
 let template = document.createElement("template");
+const domainName = "http://geeklearn.ir";
 template.innerHTML = `  
 <link rel="stylesheet" href="../../assets/tailwindCss/css/main.css" />
 <link rel="stylesheet" href="../../assets/font/font-awesome/all.min.css" />
@@ -47,9 +48,9 @@ template.innerHTML = `
         </div>
         <div class="mt-2 p-3 w-full">
           <ul class="list-none flex flex-col gap-y-0.5 w-full p-1">
-            <li class="text-sm itemMenu py-3 px-1 cursor-pointer">
+            <li class="text-sm  py-3 px-1 cursor-pointer">
               <a
-                href=""
+                href="javascript:void(0)"
                 class="text-[#144273] flex items-center cursor-pointer"
               >
                 <i class="fa-solid fa-bag-shopping text-[#144273] ml-2"></i>
@@ -72,10 +73,10 @@ template.innerHTML = `
                 class="list-none flex flex-col w-full gap-y-3 subMenuList text-sm "
               >
                 <li class="flex">
-                <a  href="http://geeklearn.ir/panel/admin/coursesList.html" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1"> لیست دوره ها</a>
+                <a  href="${domainName}/panel/admin/coursesList.html" class=" w-full py-2 hover:bg-[#E0F6EF] transition-all text-gray-500 rounded-sm px-1"> لیست دوره ها</a>
                 </li>
                 <li class="flex">
-                <a href="http://geeklearn.ir/panel/admin/addNewCourse.html" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1">افزودن دوره جدید</a>
+                <a href="${domainName}/panel/admin/addNewCourse.html" class=" w-full py-2 hover:bg-[#E0F6EF] transition-all text-gray-500 rounded-sm px-1">افزودن دوره جدید</a>
                 </li>
               </ul>
             </li>
@@ -92,10 +93,10 @@ template.innerHTML = `
               class="list-none flex flex-col w-full gap-y-3 subMenuList text-sm"
             >
               <li class="flex">
-              <a  href="javascript:void(0);" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1"> لیست دوره ها</a>
+              <a  href="${domainName}/panel/admin/teachersList.html" class=" w-full py-2 hover:bg-[#E0F6EF] transition-all text-gray-500 rounded-sm px-1"> لیست  مدرسین</a>
               </li>
               <li class="flex">
-              <a href="javascript:void(0);" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1">افزودن دوره جدید</a>
+              <a href="${domainName}/panel/admin/addNewTeacher.html" class=" w-full py-2 hover:bg-[#E0F6EF] transition-all text-gray-500 rounded-sm px-1">افزودن مدرس جدید</a>
               </li>
               
             </ul>
@@ -106,7 +107,7 @@ template.innerHTML = `
                 class="text-[#144273] flex items-center"
               >
               <i class="fa-solid fa-user text-[#144273] ml-2"></i>
-           هنرجویان    
+           دانشجویان    
 
                 <i class="fa-solid fa-angle-left mr-auto text-gray-500"></i>
               </a>
@@ -114,10 +115,10 @@ template.innerHTML = `
               class="list-none flex flex-col w-full gap-y-3 subMenuList text-sm"
             >
               <li class="flex">
-              <a  href="javascript:void(0);" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1"> لیست دوره ها</a>
+              <a  href="${domainName}/panel/admin/studentsList.html" class=" w-full py-2 hover:bg-[#E0F6EF] transition-all text-gray-500 rounded-sm px-1"> لیست  دانشجویان</a>
               </li>
               <li class="flex">
-              <a href="javascript:void(0);" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1">افزودن دوره جدید</a>
+              <a href="${domainName}/panel/admin/addNewStudent.html" class=" w-full py-2 hover:bg-[#E0F6EF] transition-all text-gray-500 rounded-sm px-1">افزودن دانشجو جدید</a>
               </li>
               
             </ul>
@@ -135,12 +136,8 @@ template.innerHTML = `
               class="list-none flex flex-col w-full gap-y-3 subMenuList text-sm"
             >
               <li class="flex">
-              <a  href="javascript:void(0);" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1"> لیست دوره ها</a>
-              </li>
-              <li class="flex">
-              <a href="javascript:void(0);" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1">افزودن دوره جدید</a>
-              </li>
-              
+              <a  href="${domainName}/panel/admin/ordersList.html" class=" w-full py-2 hover:bg-[#E0F6EF] transition-all text-gray-500 rounded-sm px-1"> لیست سفارشات</a>
+              </li>   
             </ul>
             </li>
             <li class="text-sm itemMenu py-3 px-1 cursor-pointer">
@@ -156,10 +153,10 @@ template.innerHTML = `
               class="list-none flex flex-col w-full gap-y-3 subMenuList text-sm"
             >
               <li class="flex">
-              <a  href="javascript:void(0);" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1"> لیست دوره ها</a>
+              <a  href="${domainName}/panel/admin/blogsList.html" class=" w-full py-2 hover:bg-[#E0F6EF] transition-all text-gray-500 rounded-sm px-1"> لیست بلاگ ها</a>
               </li>
               <li class="flex">
-              <a href="javascript:void(0);" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1">افزودن دوره جدید</a>
+              <a href="${domainName}/panel/admin/addNewBlog.html" class=" w-full py-2 hover:bg-[#E0F6EF] transition-all text-gray-500 rounded-sm px-1">افزودن بلاگ جدید</a>
               </li>
               
             </ul>
@@ -177,12 +174,8 @@ template.innerHTML = `
               class="list-none flex flex-col w-full gap-y-3 subMenuList text-sm"
             >
               <li class="flex">
-              <a  href="javascript:void(0);" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1"> لیست دوره ها</a>
-              </li>
-              <li class="flex">
-              <a href="javascript:void(0);" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1">افزودن دوره جدید</a>
-              </li>
-              
+              <a  href="${domainName}/panel/admin/commentsList.html" class=" w-full py-2 hover:bg-[#E0F6EF] transition-all text-gray-500 rounded-sm px-1"> لیست نظرات </a>
+              </li>     
             </ul>
             </li>
             <li class="text-sm itemMenu py-3 px-1 cursor-pointer">
@@ -199,12 +192,8 @@ template.innerHTML = `
               class="list-none flex flex-col w-full gap-y-3 subMenuList text-sm"
             >
               <li class="flex">
-              <a  href="javascript:void(0);" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1"> لیست دوره ها</a>
+              <a  href="${domainName}/panel/admin/ticketsList.html" class=" w-full py-2 hover:bg-[#E0F6EF] transition-all text-gray-500 rounded-sm px-1"> لیست تیکت ها</a>
               </li>
-              <li class="flex">
-              <a href="javascript:void(0);" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1">افزودن دوره جدید</a>
-              </li>
-              
             </ul>
             </li>
             <li class="text-sm itemMenu py-3 px-1 cursor-pointer">
@@ -221,10 +210,10 @@ template.innerHTML = `
               class="list-none flex flex-col w-full gap-y-3 subMenuList text-sm"
             >
               <li class="flex">
-              <a  href="javascript:void(0);" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1"> لیست دوره ها</a>
+              <a  href="${domainName}/panel/admin/categoriesList.html" class=" w-full py-2 hover:bg-[#E0F6EF] transition-all text-gray-500 rounded-sm px-1"> لیست عنوان ها</a>
               </li>
               <li class="flex">
-              <a href="javascript:void(0);" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1">افزودن دوره جدید</a>
+              <a href="${domainName}/panel/admin/addNewCategory.html" class=" w-full py-2 hover:bg-[#E0F6EF] transition-all text-gray-500 rounded-sm px-1">افزودن عنوان جدید</a>
               </li>
               
             </ul>
@@ -237,19 +226,7 @@ template.innerHTML = `
                 <i class="fa-solid fa-gear text-[#144273] ml-2"></i>
 
                 تنظیمات
-                <i class="fa-solid fa-angle-left mr-auto text-gray-500"></i>
               </a>
-              <ul
-              class="list-none flex flex-col w-full gap-y-3 subMenuList text-sm"
-            >
-              <li class="flex">
-              <a  href="javascript:void(0);" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1"> لیست دوره ها</a>
-              </li>
-              <li class="flex">
-              <a href="javascript:void(0);" class=" w-full py-2 hover:bg-[#E0F6EF] text-gray-500 rounded-sm px-1">افزودن دوره جدید</a>
-              </li>
-              
-            </ul>
             </li>
           </ul>
         </div>

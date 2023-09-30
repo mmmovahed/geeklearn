@@ -65,8 +65,7 @@
 }
 
 .itemMenu.open ul {
-  min-height: 100px;
+  min-height: 50px;
   max-height: 200px;
   padding-top: 1.5rem;
 }
-
