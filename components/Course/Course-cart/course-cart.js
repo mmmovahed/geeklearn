@@ -41,22 +41,26 @@ class CourseCart extends HTMLElement {
     this.shadowRoot
       .querySelector(".course-teacher")
       .setAttribute("href", this.getAttribute("teacherId"));
-    // if (this.getAttribute("course-title").length > 39) {
-    //   const x = this.getAttribute("course-title").slice(0, 32);
-
-    //   this.shadowRoot.querySelector(".course-title").innerHTML =
-    //     x.concat("...");
-    // } else {
-    //   this.shadowRoot.querySelector(".course-title").innerHTML =
-    //     this.getAttribute("course-title");
-    // }
+    if (this.getAttribute("course-title") != null) {
+      if (this.getAttribute("course-title").length > 39) {
+        const x = this.getAttribute("course-title").slice(0, 32);
+        this.shadowRoot.querySelector(".course-title").innerHTML =
+          x.concat("...");
+      } else {
+        this.shadowRoot.querySelector(".course-title").innerHTML =
+          this.getAttribute("course-title");
+      }
+    }
 
     this.shadowRoot
       .querySelector(".course-title")
       .setAttribute("href", this.getAttribute("courseId"));
-    // this.shadowRoot
-    //   .querySelector(".img-course")
-    //   .setAttribute("src", this.getAttribute("image"));
+    if (this.getAttribute("image") != null) {
+      this.shadowRoot
+        .querySelector(".img-course")
+        .setAttribute("src", this.getAttribute("image"));
+    }
+
     this.shadowRoot
       .querySelector(".link")
       .setAttribute("href", this.getAttribute("courseId"));
