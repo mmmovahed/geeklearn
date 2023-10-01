@@ -16,4 +16,21 @@ So on this file, I want to explain every detail about the panel `API`
      *  in_advance
      *  level
      *  [label in array] -> labels
+
+
+
+     *Example :
+     {
+         "title":"test",
+         "description":"description",
+         "thumbnail":"thumbnail",
+         "teacher_id":5,
+         "advantages":"advantages",
+         "category_id":8,
+         "cost":"cost",
+         "in_advance":"in_advance",
+         "level":"level",
+         "labels":{"1":3,"2":4,"3":5, "4":454}
+
+     }
 }

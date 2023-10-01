@@ -1,92 +1,86 @@
 <?php
-//require_once "init.php";
-//$per=5;
-////$main->check_permission($per);
-///*
-// *  title
-// *  description
-// *  thumbnail
-// *  teacher_id
-// *  advantages
-// *  category_id
-// *  created_at
-// *  cost
-// *  in_advance
-// *  level
-// *  [label in array]
-// */
-//$data = json_decode(file_get_contents('php://input'), true);
-//print_r($data);
-//echo $data["operacion"];
-//if (
-//    isset($_POST["title"])
-//){
-//    $title= $_POST["title"];
-////    $description= $_POST["description"];
-////    $thumbnail= $_POST["thumbnail"];
-////    $teacher_id= $_POST["teacher_id"];
-////    $advantages= $_POST["advantages"];
-////    $category_id= $_POST["category_id"];
-////    $cost= $_POST["cost"];
-////    $in_advance= $_POST["in_advance"];
-////    $level= $_POST["level"];
-////    $labels= $_POST["labels"];
-//
-//    echo "love";
-//
-//
-//    $sql_for_course="";
-//}
-//else
-//{
-//    echo "NOt";
-//}
+require_once "init.php";
+$per=5;
+$json = file_get_contents('php://input');
+if (empty($json) OR $json == null)
+    $main->redirect("../../not_found");
 
-header("Access-Control-Allow-Origin: *");
-header("Content-Type: application/json; charset=UTF-8");
-header("Access-Control-Allow-Methods: POST");
-header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
+$data = json_decode($json, true);
+//$main->check_permission($per);
+/*
+ *  title
+ *  description
+ *  thumbnail
+ *  teacher_id
+ *  advantages
+ *  category_id
+ *  created_at
+ *  cost
+ *  in_advance
+ *  level
+ *  [label in array]
+ */
+if (
+    isset($data["title"]) AND
+    isset($data["description"]) AND
+    isset($data["thumbnail"]) AND
+    isset($data["teacher_id"]) AND
+    isset($data["advantages"]) AND
+    isset($data["category_id"]) AND
+    isset($data["cost"]) AND
+    isset($data["in_advance"]) AND
+    isset($data["level"]) AND
+    isset($data["labels"])
+){
+    $title= $data["title"];
+    $description= $data["description"];
+    $thumbnail= $data["thumbnail"];
+    $teacher_id= $data["teacher_id"];
+    $advantages= $data["advantages"];
+    $category_id= $data["category_id"];
+    $cost= $data["cost"];
+    $in_advance= $data["in_advance"];
+    $level= $data["level"];
+    $labels=$data["labels"];
+    $time=$main->time();
 
-$data = array(
-    array(
-        'id' => '1',
-        'name' => 'Bandung'
-    ),
-    array(
-        'id' => '2',
-        'name' => 'Jakarta'
-    ),
-    array(
-        'id' => '3',
-        'name' => 'Surabaya'
-    ),
-);
+    //$labels=json_decode($labels, true);
+    //var_dump($labels);
+    //echo count($labels);
 
-if(!empty($_POST['name']) && !empty($_POST['id'])) {
-// New Data Input
-    $newdata = array(
-        'id' => $_POST['id'],
-        'name' => $_POST['name']
-    );
-// Add Data
-    $data[] = $newdata;
-// New Data
-    foreach($data as $d) {
-        $result['city'][] = array(
-            'id' => $d['id'],
-            'name' => $d['name'],
-        );
+    $sql_for_course="
+    INSERT INTO `tbl_courses`(`title`, `description`, `thumbnail`, `teacher_id`, `advantages`, `category_id`, `created_at`, `last_update`, 
+                              `cost`, `in_advance`, `level`)
+    VALUES('".$title."', '".$description."', '".$thumbnail."',".$teacher_id.", '".$advantages."', ".$category_id.",'".$time."', '".$time."'
+    ,".$cost.", ".$in_advance.", '".$level."') 
+    ";
+    $result=$main->queryForInsertData($sql_for_course);
+    $last_id=$main->last_id();
+    if ($result==true) {
+        $i=0;
+        foreach($labels as $x => $x_value) {
+            $sql_for_labels = "INSERT INTO `tbl_labels`(`course_id`, `name`) VALUES(" . $last_id . ", '" . $x_value . "')";
+            $res=$main->queryForInsertData($sql_for_labels);
+
+        }
+//        while ($i<count($labels)) {
+//            if ($res != true)
+//            {
+//                break;
+//                $respond=["status"=>500];
+//                http_response_code(500);
+//            }
+//        }
+        $respond = ["status" => 200];
+        http_response_code(200);
+
     }
-    $result['status'] = 'success';
-} else {
-    foreach($data as $d) {
-        $result['city'][] = array(
-            'id' => $d['id'],
-            'name' => $d['name'],
-        );
+    else{
+        $respond=["status"=>500];
+        http_response_code(500);
     }
-    $result['status'] = 'success';
 }
-
-http_response_code(200);
-echo json_encode($result);
+else
+{
+    echo "Not complete or unset";
+}

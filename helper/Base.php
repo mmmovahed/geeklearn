@@ -31,6 +31,10 @@ abstract class Base
         return $result;
     }
 
+    public function last_id()
+    {
+        return mysqli_insert_id($this->dblink);
+    }
     public function selectData($q)
     {
         $result = mysqli_query($this->dblink,$q);
@@ -109,4 +113,9 @@ abstract class Base
         header("Location:/Not_found/");
     }
 
+    public function time()
+    {
+        $TIME = date("Y-m-d--H:i:s");
+        return $TIME;
+    }
 }
