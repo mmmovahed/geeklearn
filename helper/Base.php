@@ -12,9 +12,9 @@ abstract class Base
     {
         $result=mysqli_query($this->dblink,$q);
         if(stristr($q,'INSERT'))
-            return mysqli_insert_id($this->dbLink);
+            return mysqli_insert_id($this->dblink);
         else if(stristr($q,'UPDATE') || stristr($q,'DELETE'))
-            return mysqli_affected_rows($this->dbLink);
+            return mysqli_affected_rows($this->dblink);
         else
             return $result;
     }

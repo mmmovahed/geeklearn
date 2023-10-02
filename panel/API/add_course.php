@@ -44,9 +44,6 @@ if (
     $labels=$data["labels"];
     $time=$main->time();
 
-    //$labels=json_decode($labels, true);
-    //var_dump($labels);
-    //echo count($labels);
 
     $sql_for_course="
     INSERT INTO `tbl_courses`(`title`, `description`, `thumbnail`, `teacher_id`, `advantages`, `category_id`, `created_at`, `last_update`, 
@@ -61,16 +58,13 @@ if (
         foreach($labels as $x => $x_value) {
             $sql_for_labels = "INSERT INTO `tbl_labels`(`course_id`, `name`) VALUES(" . $last_id . ", '" . $x_value . "')";
             $res=$main->queryForInsertData($sql_for_labels);
-
+            if ($res != true)
+            {
+                break;
+                $respond=["status"=>500];
+                http_response_code(500);
+            }
         }
-//        while ($i<count($labels)) {
-//            if ($res != true)
-//            {
-//                break;
-//                $respond=["status"=>500];
-//                http_response_code(500);
-//            }
-//        }
         $respond = ["status" => 200];
         http_response_code(200);
 

@@ -34,3 +34,12 @@ So on this file, I want to explain every detail about the panel `API`
 
      }
 }
+
+*course delete -> del_course.php -> POST{
+    just POST an id
+
+    *example
+    {
+        "id":1266
+    }
+}
