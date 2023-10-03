@@ -43,3 +43,23 @@ So on this file, I want to explain every detail about the panel `API`
         "id":1266
     }
 }
+
+*course update -> edit_course.php -> POST{
+
+    *Example :
+         {
+             "id": 1268,
+             "title":"test",
+             "description":"description",
+             "thumbnail":"thumbnail",
+             "teacher_id":5,
+             "advantages":"advantages",
+             "category_id":8,
+             "discount":0.5,
+             "cost":"cost",
+             "in_advance":"in_advance",
+             "level":"level",
+             "status":6
+
+         }
+}

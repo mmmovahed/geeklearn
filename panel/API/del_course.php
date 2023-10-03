@@ -3,9 +3,6 @@ require_once "init.php";
 $per=5;
 //$main->check_permission($per);
 
-/*
- *  id
- */
 $json = file_get_contents('php://input');
 if (empty($json) OR $json == null)
     $main->redirect("../../not_found");
