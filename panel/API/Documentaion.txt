@@ -63,3 +63,37 @@ So on this file, I want to explain every detail about the panel `API`
 
          }
 }
+
+*course accept -> accept_course.php -> POST{
+    *example
+    {
+        "id": 1268
+    }
+}
+
+*course reject -> reject_course.php -> POST{
+    *example
+    {
+        "id": 1268
+    }
+}
+
+
+
+****************************************** Teacher's API***********************************
+
+*all_teachers -> GET
+
+*add teacher{
+POST -> id which is from user table
+*example
+    {
+            "user_id": 1,
+            "name": " حسین ",
+            "family": "ساوه دربندسری",
+            "email": "save@gmail.com",
+            "telegram_id": "save_amirhossein",
+            "picture": "https://toplearn.com/img/user/250x259/5842b2a5-fc7b-4dd0-b4f3-b0815af9422b_amirhossein_darbandsary.jpeg",
+            "description": "رزومه من رو میتونین "
+    }
+}

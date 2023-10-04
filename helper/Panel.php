@@ -118,4 +118,15 @@ class Panel extends Base
         $data = $result->fetch_all(MYSQLI_ASSOC);
         return json_encode($data);
         }
+
+    public function all_teachers()
+    {
+        $sql = "
+        SELECT *
+        FROM `tbl_teachers`
+        ";
+        $result = $this->selectData($sql);
+        $data = $result->fetch_all(MYSQLI_ASSOC);
+        return json_encode($data);
+    }
 }

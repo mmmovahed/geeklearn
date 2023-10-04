@@ -1,5 +1,4 @@
 <?php
-
 require_once "init.php";
 $per = 6;
 $json = file_get_contents('php://input');
