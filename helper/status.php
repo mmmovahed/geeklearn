@@ -38,5 +38,7 @@ class status extends Base
             return "حذف شده(عدم کیفیت)";
         elseif ($status == 6)
             return "در انتظار تایید";
+        elseif ($status == 7)
+            return "رد شده توسط ادمین";
     }
 }
