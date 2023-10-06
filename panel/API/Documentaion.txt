@@ -97,3 +97,18 @@ POST -> id which is from user table
             "description": "رزومه من رو میتونین "
     }
 }
+
+*edit teacher -> POST
+*example
+{
+        {
+             "id": 1268,
+             "name":"test",
+             "family":"description",
+             "email":"thumbnail",
+             "telegram_id":5,
+             "picture":"advantages",
+             "description":8,
+             "status":1
+         }
+}
