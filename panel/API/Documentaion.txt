@@ -78,6 +78,13 @@ So on this file, I want to explain every detail about the panel `API`
     }
 }
 
+*return a course -> POST
+this file is for when you want the information of a specefic course
+* example{
+    {
+        "id": 2
+    }
+}
 
 
 ****************************************** Teacher's API***********************************
