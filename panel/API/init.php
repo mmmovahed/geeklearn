@@ -10,6 +10,9 @@ require_once '../../helper/panel.php';
 require_once "../../helper/status.php";
 $status_code=new status();
 $main=new Panel();
+
+header("Content-Type: application/json; charset=UTF-8");
+
 //if (!(isset($_SESSION["user_id"]) AND isset($_SESSION["user_status"])))
 //{
 //    header("Location: /404.php");

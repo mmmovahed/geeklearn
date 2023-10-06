@@ -112,3 +112,11 @@ POST -> id which is from user table
              "status":1
          }
 }
+
+*return a teacher -> POST
+this file is for when you want the information of a specefic teacher
+* example{
+    {
+        "id": 13546
+    }
+}
