@@ -121,9 +121,43 @@ POST -> id which is from user table
 }
 
 *return a teacher -> POST
-this file is for when you want the information of a specefic teacher
+this file is for when you want the information of a specific teacher
 * example{
     {
         "id": 13546
     }
 }
+
+*********************************** Users APIs ***************************
+*all_users -> GET
+Just pay attention password will not share
+
+*return a user -> POST
+this file is for when you want the information of a specific user but the password will not share
+* example{
+    {
+        "id": 1
+    }
+}
+
+*edit_user -> POST
+In this filed status and privilege_id are 2 separate things
+If wallet id is not necessary, please inform me
+*example
+{
+        {
+             "id": 1,
+             "name":"test",
+             "family":"description",
+             "age":"25",
+             "phone":"0916564846",
+             "email":"thumbnail",
+             "wallet_id":5,
+             "privilege_id":1,
+             "status":1
+         }
+}
+
+* Delete user
+we can not delete a user
+for deny the accesbility we can just limit the privilege
