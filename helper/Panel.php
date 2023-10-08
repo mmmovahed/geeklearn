@@ -129,4 +129,15 @@ class Panel extends Base
         $data = $result->fetch_all(MYSQLI_ASSOC);
         return json_encode($data);
     }
+
+    public function all_users()
+    {
+        $sql = "
+        SELECT id, name, family, age, email, phone, `created-at`, `last-login`, `privillage-id`
+        FROM `tbl_users`
+        ";
+        $result = $this->selectData($sql);
+        $data = $result->fetch_all(MYSQLI_ASSOC);
+        return json_encode($data);
+    }
 }
